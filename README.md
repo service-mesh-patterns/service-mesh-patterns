@@ -1,5 +1,23 @@
-# layer5-repo-template
-This repository is used as the boilerplate for consistency across all Layer5 repos.
+<div align="center">
+<h1 align="center">Service Mesh Patterns</h1>
+</div>
+<p align="center">
+    <img width="20%" src="https://avatars.githubusercontent.com/u/68668864?s=200&v=4">
+</p>
+<h5><p align="center"><i>If you’re using Meshery Service Patterns or if you like the project, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
+
+Patterns and best practices for getting most out of Istio, Linkerd, Consul, App Mesh or <a href="https://layer5.io/service-mesh-landscape">any service mesh</a>, including those using Envoy and use of WebAssembly.
+
+## What are Service Mesh Patterns?
+A service mesh is a layer in your infrastructure that facilitates communication between services… and so much more. Its value is enormous, and the value you derive from one is very much related to what role you play in the design, implementation, and operations of your cloud native applications and infrastructure.
+
+This feature area is under active development. Until additional documentation is published, see <a href="https://docs.google.com/document/d/1B2N78EdRiZF-yVo1-HY3syppwBBDumgMuYg6seD-AJ4/edit#"> the Meshery and Service Mesh Patterns</a> design specification for further details.
+
+## Prototyping Pattern Files and their Orchestration
+Interpreting Pattern files in Meshery
+<p align="center">
+    <img width="80%" src="https://lh3.googleusercontent.com/SNoWFfPQaqxHyxj_MlaqUkfox3K9tDTGSqLetSeGUZcSOVfQx8yKljmC1UwPQQBWcacPIqnNTgGq4S4TuKRfUns5c-sHwfZNoJZcu_Nrhc_WjvGFXS5BvjZZmWBexrnLkh_K1qEy">
+</p>
 
 <div>&nbsp;</div>
 
@@ -16,7 +34,6 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 Become a <b>Meshtee</b> today!</p>
 
 Find out more on the <a href="https://layer5.io/community">Layer5 community</a>. <br />
-<br /><br /><br /><br />
 </p>
 
 <div>&nbsp;</div>
