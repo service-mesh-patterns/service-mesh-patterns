@@ -2,7 +2,7 @@
 <h1 align="center">Service Mesh Patterns</h1>
 </div>
 <p align="center">
-    <img width="20%" src="https://avatars.githubusercontent.com/u/68668864?s=200&v=4">
+    <img width="20%" src=".github/readme/images/service-mesh-pattern.png">
 </p>
 <h5><p align="center"><i>If you’re using Meshery Service Patterns or if you like the project, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
 
