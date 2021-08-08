@@ -16,7 +16,7 @@ This feature area is under active development. Until additional documentation is
 ## Prototyping Pattern Files and their Orchestration
 Interpreting Pattern files in Meshery
 <p align="center">
-    <img width="80%" src="https://lh3.googleusercontent.com/SNoWFfPQaqxHyxj_MlaqUkfox3K9tDTGSqLetSeGUZcSOVfQx8yKljmC1UwPQQBWcacPIqnNTgGq4S4TuKRfUns5c-sHwfZNoJZcu_Nrhc_WjvGFXS5BvjZZmWBexrnLkh_K1qEy">
+    <img width="80%" src=".github/readme/images/Meshery-Patterns-with-OAM.png">
 </p>
 
 <div>&nbsp;</div>
