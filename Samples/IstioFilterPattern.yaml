@@ -34,3 +34,4 @@ services:
               "@type": "type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager"
               common_http_protocol_options:
                 idle_timeout: 30s
+                
