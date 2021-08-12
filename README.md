@@ -1,7 +1,24 @@
-# Service Mesh Patterns
+<div align="center">
+<h1 align="center">Service Mesh Patterns</h1>
+</div>
+<p align="center">
+    <img width="20%" src=".github/readme/images/service-mesh-pattern.png">
+</p>
+
+<h5><p align="center"><i>If you’re using this project or simply like its concept, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
+
 This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastruture and application deployments and applying best practices.
 
-Each pattern can be used as a template and is customizable.
+A service mesh is a layer in your infrastructure that facilitates communication between services… and so much more. Its value is enormous, and the value you derive from one is very much related to what role you play in the design, implementation, and operations of your cloud native applications and infrastructure. Service mesh patterns help you get the most out of Linkerd, Consul, App Mesh, Istio, Kuma, Open Service Mesh or <a href="https://layer5.io/service-mesh-landscape">any service mesh</a>, including those using Envoy and use of WebAssembly. Each pattern can be used as a template and is customizable. 
+
+## What are Service Mesh Patterns?
+This feature area is under active development. Until additional documentation is published, see <a href="https://docs.google.com/document/d/1B2N78EdRiZF-yVo1-HY3syppwBBDumgMuYg6seD-AJ4/edit#"> the Meshery and Service Mesh Patterns</a> design specification for further details.
+
+## Prototyping Pattern Files and their Orchestration
+Interpreting Pattern files in Meshery
+<p align="center">
+    <img width="80%" src=".github/readme/images/Meshery-Patterns-with-OAM.png">
+</p>
 
 <div>&nbsp;</div>
 
@@ -18,7 +35,6 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 Become a <b>Meshtee</b> today!</p>
 
 Find out more on the <a href="https://layer5.io/community">Layer5 community</a>. <br />
-<br /><br /><br /><br />
 </p>
 
 <div>&nbsp;</div>
