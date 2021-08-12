@@ -1,0 +1,36 @@
+name: IstioFilterPatternXYZ
+version: 0.0.1
+services:
+  genericIstioFilter:
+    type: EnvoyFilterIstio
+    namespace: test-ns
+    settings:
+      configPatches:
+      - applyTo: NETWORK_FILTER
+        match:
+          context: SIDECAR_OUTBOUND 
+          listener:
+            portNumber: 9307
+            filterChain:
+              filter:
+                name: "envoy.filters.network.tcp_proxy"
+        patch:
+          operation: INSERT_BEFORE
+          value:
+            name: "envoy.config.filter.network.custom_protocol"
+            typed_config:
+             ...
+      - applyTo: NETWORK_FILTER 
+        match:
+          listener:
+            filterChain:
+              filter:
+                name: "envoy.filters.network.http_connection_manager"
+        patch:
+          operation: MERGE
+          value:
+            name: "envoy.filters.network.http_connection_manager"
+            typed_config:
+              "@type": "type.googleapis.com/envoy.extensions.filters.network.http_connection_manager.v3.HttpConnectionManager"
+              common_http_protocol_options:
+                idle_timeout: 30s
