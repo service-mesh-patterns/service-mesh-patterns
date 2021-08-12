@@ -1,5 +1,7 @@
-# layer5-repo-template
-This repository is used as the boilerplate for consistency across all Layer5 repos.
+# Service Mesh Patterns
+This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastruture and application deployments and applying best practices.
+
+Each pattern can be used as a template and is customizable.
 
 <div>&nbsp;</div>
 
