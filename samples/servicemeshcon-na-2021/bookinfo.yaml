@@ -1,0 +1,138 @@
+name: BookInfo
+services:
+  productpage:
+    type: Application
+    namespace: default
+    settings:
+      advanced:
+        labels:
+          version: v1
+      containers:
+      - image: docker.io/istio/examples-bookinfo-productpage-v1:1.16.2
+        name: productpage
+        ports:
+        - containerPort: 9080
+          name: http
+      name: productpage
+      namespace: default
+      replicas: 1
+    traits:
+      meshmap:
+        edges: []
+        position:
+          posX: 281.0063520501649
+          posY: 320.0015880125412
+  ratings:
+    type: Application
+    namespace: default
+    settings:
+      advanced:
+        labels:
+          version: v1
+      containers:
+      - image: docker.io/istio/examples-bookinfo-ratings-v1:1.16.2
+        name: ratings
+        ports:
+        - containerPort: 9080
+          name: http
+      name: ratings
+      namespace: default
+      replicas: 1
+    traits:
+      meshmap:
+        edges: []
+        position:
+          posX: 594.2235043852913
+          posY: 403.9578806830493
+  reviews:
+    type: Service.K8s
+    namespace: default
+    settings:
+      name: reviews
+      namespace: default
+      ports:
+      - name: http
+        port: 9080
+      selector:
+        custom.app: reviews
+    traits:
+      meshmap:
+        edges: []
+        position:
+          posX: 364.4780850726022
+          posY: 249.95246039425695
+  reviews-v1:
+    type: Application
+    namespace: default
+    settings:
+      advanced:
+        labels:
+          custom.app: reviews
+          version: v1
+        skip_service: true
+      containers:
+      - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.2
+        name: reviews
+        ports:
+        - containerPort: 9080
+          name: http
+      name: reviews-v1
+      namespace: default
+      replicas: 1
+    traits:
+      meshmap:
+        edges: []
+        parent: 8817de37-1edc-443a-bb5a-adf45ca37d17
+        position:
+          posX: 504.8383145628695
+          posY: 186.54347934421563
+  reviews-v2:
+    type: Application
+    namespace: default
+    settings:
+      advanced:
+        labels:
+          custom.app: reviews
+          version: v2
+        skip_service: true
+      containers:
+      - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.2
+        name: reviews
+        ports:
+        - containerPort: 9080
+          name: http
+      name: reviews-v3
+      namespace: default
+      replicas: 1
+    traits:
+      meshmap:
+        edges: []
+        parent: 8817de37-1edc-443a-bb5a-adf45ca37d17
+        position:
+          posX: 505.1985275689884
+          posY: 316.69688801700914
+  reviews-v3:
+    type: Application
+    namespace: default
+    settings:
+      advanced:
+        labels:
+          custom.app: reviews
+          version: v3
+        skip_service: true
+      containers:
+      - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.2
+        name: reviews
+        ports:
+        - containerPort: 9080
+          name: http
+      name: reviews-v3
+      namespace: default
+      replicas: 1
+    traits:
+      meshmap:
+        edges: []
+        parent: 8817de37-1edc-443a-bb5a-adf45ca37d17
+        position:
+          posX: 505.1985275689884
+          posY: 316.69688801700914

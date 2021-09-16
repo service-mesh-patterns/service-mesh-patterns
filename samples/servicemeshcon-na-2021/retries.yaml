@@ -1,0 +1,24 @@
+name: Retries
+services:
+  retries:
+    type: VirtualService.Istio
+    namespace: default
+    settings:
+      hosts:
+      - ratings
+      http:
+      - retries:
+          attempts: 3
+          perTryTimeout: 2s
+        route:
+        - destination:
+            host: ratings
+            subset: v1
+      name: retries
+      namespace: default
+    traits:
+      meshmap:
+        edges: []
+        position:
+          posX: 187.11498940869578
+          posY: 400.41306996889995

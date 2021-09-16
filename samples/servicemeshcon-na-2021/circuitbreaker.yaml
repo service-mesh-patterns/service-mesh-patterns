@@ -1,0 +1,33 @@
+name: Circuit Breaker
+services:
+  circuit-breaker:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: productpage
+      name: circuit-breaker
+      namespace: default
+      subsets:
+      - labels:
+          version: v1
+        name: v1
+      trafficPolicy:
+        connectionPool:
+          http:
+            http1MaxPendingRequests: 1
+            maxRequestsPerConnection: 1
+          tcp:
+            maxConnections: 1
+        outlierDetection:
+          baseEjectionTime: 2m
+          consecutive5xxErrors: 1
+          interval: 1s
+          maxEjectionPercent: 100
+        tls:
+          mode: ISTIO_MUTUAL
+    traits:
+      meshmap:
+        edges: []
+        position:
+          posX: 275.91660348925706
+          posY: 343.5475219157879

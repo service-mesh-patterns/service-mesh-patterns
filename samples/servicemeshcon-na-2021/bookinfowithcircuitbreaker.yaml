@@ -1,4 +1,4 @@
-name: MesheryGeneratedPatternFile
+name: BookInfo with Circuit Breaker
 services:
   bookinfo-vs:
     type: VirtualService.Istio
@@ -9,12 +9,7 @@ services:
       hosts:
       - bookinfo.meshery.io
       http:
-      - fault:
-          delay:
-            fixedDelay: 7s
-            percentage:
-              value: 100
-        match:
+      - match:
         - uri:
             exact: /productpage
         - uri:
@@ -30,7 +25,7 @@ services:
             host: productpage
             port:
               number: 9080
-      name: bookinfo-vs
+      name: bookinfo-vsc
       namespace: default
     traits:
       meshmap:
@@ -38,10 +33,46 @@ services:
         - from: $(#ref.services.sample-app-gateway.id)
           to: $(#ref.services.bookinfo-vs.id)
         - from: $(#ref.services.bookinfo-vs.id)
-          to: $(#ref.services.productpage.id)
+          to: $(#ref.services.circuit-breaker.id)
         position:
           posX: 183.00511692929953
           posY: 320.00211735005496
+  circuit-breaker:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: productpage
+      name: circuit-breaker
+      namespace: default
+      subsets:
+      - labels:
+          version: v1
+        name: v1
+      trafficPolicy:
+        connectionPool:
+          http:
+            http1MaxPendingRequests: 1
+            maxRequestsPerConnection: 1
+          tcp:
+            maxConnections: 1
+        outlierDetection:
+          baseEjectionTime: 2m
+          consecutive5xxErrors: 1
+          interval: 1s
+          maxEjectionPercent: 100
+        tls:
+          mode: ISTIO_MUTUAL
+    traits:
+      meshmap:
+        edges:
+        - from: $(#ref.services.bookinfo-vs.id)
+          to: $(#ref.services.circuit-breaker.id)
+        - from: $(#ref.services.circuit-breaker.id)
+          to: $(#ref.services.productpage.id)
+        parent: 3416b94f-bcf3-44a9-84be-d218c2f54a42
+        position:
+          posX: 282.54797313450814
+          posY: 314.79176462298113
   details:
     type: Application
     namespace: default
@@ -64,8 +95,8 @@ services:
         - from: $(#ref.services.productpage.id)
           to: $(#ref.services.details.id)
         position:
-          posX: 414.45747658153505
-          posY: 388.85606569789246
+          posX: 423.64734095658264
+          posY: 375.65541912390256
   productpage:
     type: Application
     namespace: default
@@ -85,15 +116,16 @@ services:
     traits:
       meshmap:
         edges:
-        - from: $(#ref.services.bookinfo-vs.id)
+        - from: $(#ref.services.circuit-breaker.id)
           to: $(#ref.services.productpage.id)
         - from: $(#ref.services.productpage.id)
           to: $(#ref.services.reviews.id)
         - from: $(#ref.services.productpage.id)
           to: $(#ref.services.details.id)
+        parent: 3416b94f-bcf3-44a9-84be-d218c2f54a42
         position:
-          posX: 281.0063520501649
-          posY: 320.0015880125412
+          posX: 341.5377387462436
+          posY: 313.6602046443806
   ratings:
     type: Application
     namespace: default
@@ -113,11 +145,15 @@ services:
     traits:
       meshmap:
         edges:
+        - from: $(#ref.services.reviews-v1.id)
+          to: $(#ref.services.ratings.id)
+        - from: $(#ref.services.reviews-v2.id)
+          to: $(#ref.services.ratings.id)
         - from: $(#ref.services.reviews-v3.id)
           to: $(#ref.services.ratings.id)
         position:
-          posX: 649
-          posY: 391
+          posX: 595.3864860691875
+          posY: 371.97584989551814
   reviews:
     type: Service.K8s
     namespace: default
@@ -132,17 +168,17 @@ services:
     traits:
       meshmap:
         edges:
-        - from: $(#ref.services.productpage.id)
-          to: $(#ref.services.reviews.id)
+        - from: $(#ref.services.reviews.id)
+          to: $(#ref.services.reviews-v1.id)
         - from: $(#ref.services.reviews.id)
           to: $(#ref.services.reviews-v2.id)
         - from: $(#ref.services.reviews.id)
           to: $(#ref.services.reviews-v3.id)
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v1.id)
+        - from: $(#ref.services.productpage.id)
+          to: $(#ref.services.reviews.id)
         position:
-          posX: 400.9957488157415
-          posY: 193.99797562654356
+          posX: 422.3258565086454
+          posY: 205.5277635686538
   reviews-v1:
     type: Application
     namespace: default
@@ -166,10 +202,12 @@ services:
         edges:
         - from: $(#ref.services.reviews.id)
           to: $(#ref.services.reviews-v1.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+        - from: $(#ref.services.reviews-v1.id)
+          to: $(#ref.services.ratings.id)
+        parent: 1da59cb4-c7db-4b55-9a2a-7c5deb775d5a
         position:
-          posX: 534.1172892338158
-          posY: 147.36074939087763
+          posX: 513.6162081331051
+          posY: 125.96457422026145
   reviews-v2:
     type: Application
     namespace: default
@@ -193,10 +231,12 @@ services:
         edges:
         - from: $(#ref.services.reviews.id)
           to: $(#ref.services.reviews-v2.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+        - from: $(#ref.services.reviews-v2.id)
+          to: $(#ref.services.ratings.id)
+        parent: 1da59cb4-c7db-4b55-9a2a-7c5deb775d5a
         position:
-          posX: 536.3224484379678
-          posY: 205.00335247092036
+          posX: 515.0071160896676
+          posY: 198.0854797056542
   reviews-v3:
     type: Application
     namespace: default
@@ -218,14 +258,14 @@ services:
     traits:
       meshmap:
         edges:
-        - from: $(#ref.services.reviews-v3.id)
-          to: $(#ref.services.ratings.id)
         - from: $(#ref.services.reviews.id)
           to: $(#ref.services.reviews-v3.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+        - from: $(#ref.services.reviews-v3.id)
+          to: $(#ref.services.ratings.id)
+        parent: 1da59cb4-c7db-4b55-9a2a-7c5deb775d5a
         position:
-          posX: 537.5467581185748
-          posY: 268.69329017003173
+          posX: 516.232358010059
+          posY: 268.62442597296615
   sample-app-gateway:
     type: Gateway.Istio
     namespace: default
