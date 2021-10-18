@@ -8,23 +8,23 @@ services:
       - sample-app-gateway
       hosts:
       - bookinfo.meshery.io
-  http:
-  - match:
-    - uri:
-        exact: /productpage
-    - uri:
-        prefix: /static
-    - uri:
-        exact: /login
-    - uri:
-        exact: /logout
-    - uri:
-        prefix: /api/v1/products
-    route:
-    - destination:
-        host: productpage
-        port:
-          number: 9080
+      http:
+      - match:
+        - uri:
+            exact: /productpage
+        - uri:
+            prefix: /static
+        - uri:
+            exact: /login
+        - uri:
+            exact: /logout
+        - uri:
+            prefix: /api/v1/products
+        route:
+        - destination:
+            host: productpage
+            port:
+              number: 9080
       name: bookinfo-vsc
       namespace: default
     traits:

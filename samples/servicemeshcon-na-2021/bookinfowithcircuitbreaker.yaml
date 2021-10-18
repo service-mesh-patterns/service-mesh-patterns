@@ -187,7 +187,7 @@ services:
         labels:
           custom.app: reviews
           version: v1
-        skip_service: true
+        create_service: false
       containers:
       - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.2
         name: reviews
@@ -216,7 +216,7 @@ services:
         labels:
           custom.app: reviews
           version: v2
-        skip_service: true
+        create_service: false
       containers:
       - image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.2
         name: reviews
@@ -245,7 +245,7 @@ services:
         labels:
           custom.app: reviews
           version: v3
-        skip_service: true
+        create_service: false
       containers:
       - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.2
         name: reviews
