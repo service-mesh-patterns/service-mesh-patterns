@@ -13,6 +13,9 @@ A service mesh is a layer in your infrastructure that facilitates communication 
 
 ## What are Service Mesh Patterns?
 This feature area is under active development. Until additional documentation is published, see <a href="https://docs.google.com/document/d/1B2N78EdRiZF-yVo1-HY3syppwBBDumgMuYg6seD-AJ4/edit#"> the Meshery and Service Mesh Patterns</a> design specification for further details.
+<p align="center">
+    <img width="80%" src=".github/readme/images/service-mesh-patterns-at-kubecon-china0-2021.svg">
+</p>
 
 ## Prototyping Pattern Files and their Orchestration
 Interpreting Pattern files in Meshery
