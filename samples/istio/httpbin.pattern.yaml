@@ -1,0 +1,60 @@
+name: HTTP Bin Istio
+services:
+  ns.sample:
+    type: Namespace.K8s
+    name: test
+
+  httpbin.application:
+    type: Application
+    name: httpbin
+    namespace: $(#ref.services.[ns.sample].name)
+    settings:
+      replicas: 1
+      advanced:
+        labels:
+          app: httpbin
+          version: v1
+      containers:
+        - name: httpbin
+          image: docker.io/kennethreitz/httpbin
+          ports:
+            - containerPort: 80
+    dependsOn:
+      - ns.sample
+
+  httpbin.gateway:
+    type: Gateway.Istio
+    name: sample-app-gateway
+    namespace: $(#ref.services.[ns.sample].name)
+    settings:
+      selector:
+        istio: ingressgateway 
+      servers:
+      - port:
+          number: 80
+          name: http
+          protocol: HTTP
+        hosts:
+        - "*"
+    dependsOn:
+      - ns.sample
+
+  httpbin.vs:
+    type: VirtualService.Istio
+    name: httpbin
+    namespace: $(#ref.services.[ns.sample].name) 
+    settings:
+      hosts:
+        - "*"
+      gateways:
+        - sample-app-gateway
+      http:
+        - route:
+          - destination:
+              host: httpbin
+              port:
+                number: 8000
+    dependsOn:
+      - ns.sample
+
+  

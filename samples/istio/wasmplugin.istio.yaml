@@ -1,0 +1,52 @@
+name: Istio WASM Plugin
+services:
+  ns.sample:
+    type: Namespace.K8s
+    name: test
+  istio:
+    type: IstioMesh
+    namespace: istio-system
+    settings:
+      version: 1.12.0
+    traits:
+      automaticSidecarInjection:
+        namespaces:
+          - $(#ref.services.[ns.sample].name)
+  sample.application:
+    type: Application
+    name: sample-nginx
+    namespace: $(#ref.services.[ns.sample].name)
+    settings:
+      replicas: 1
+      advanced:
+        labels:
+          auth.wasmplugin.istio.enabled: "true"
+      containers:
+        - name: sample-nginx
+          image: nginx
+          ports:
+            - containerPort: 80
+    dependsOn:
+      - ns.sample
+      - istio
+  sample.wasm.plugin.istio:
+    type: WasmPlugin.Istio
+    name: sample
+    namespace: $(#ref.services.[ns.sample].name)
+    settings:
+      url: https://github.com/istio-ecosystem/wasm-extensions/releases/download/1.11.0/basic-auth.wasm
+      selector:
+        matchLabels:
+          auth.wasmplugin.istio.enabled: "true"
+      pluginConfig:
+        basic_auth_rules:
+          - prefix: /
+            request_methods:
+              - "GET"
+            credentials:
+              - "ok:test"
+              - "YWRtaW4zOmFkbWluMw=="  
+    dependsOn:
+      - ns.sample
+      - istio
+

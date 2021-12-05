@@ -1,0 +1,203 @@
+name: BookInfoPattern
+services:  
+  details:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        labels:
+          version: v1
+      containers:
+        - name: details
+          image: docker.io/istio/examples-bookinfo-details-v1:1.16.2
+          ports:
+            - containerPort: 9080
+
+  ratings:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        labels:
+          version: v1
+      containers:
+        - name: ratings
+          image: docker.io/istio/examples-bookinfo-ratings-v1:1.16.2
+          ports:
+            - containerPort: 9080
+
+  reviews-v1:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        skip_service: true
+        labels:
+          custom.app: reviews
+          version: v1
+      containers:
+        - name: reviews
+          image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.2
+          ports:
+            - containerPort: 9080
+
+  reviews-v2:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        skip_service: true
+        labels:
+          custom.app: reviews
+          version: v2
+      containers:
+        - name: reviews
+          image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.2
+          ports:
+            - containerPort: 9080
+
+  reviews-v3:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        skip_service: true
+        labels:
+          custom.app: reviews
+          version: v3
+      containers:
+        - name: reviews
+          image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.2
+          ports:
+            - containerPort: 9080
+
+  reviews:
+    type: Service.K8s
+    namespace: default
+    settings:
+      ports:
+        - port: 9080
+          name: http
+      selector:
+        custom.app: reviews
+    dependsOn:
+      - reviews-v1
+      - reviews-v2
+      - reviews-v3
+
+  productpage:
+    type: Application
+    namespace: default
+    settings:
+      replicas: 1
+      advanced:
+        labels:
+          version: v1
+      containers:
+        - name: productpage
+          image: docker.io/istio/examples-bookinfo-productpage-v1:1.16.2
+          ports:
+            - containerPort: 9080
+
+  sample-app-gateway:
+    type: Gateway.Istio
+    namespace: default
+    settings:
+      selector:
+        istio: ingressgateway
+      servers:
+        - port:
+            number: 80
+            name: http
+            protocol: HTTP
+          hosts:
+            - "*"
+
+  bookinfo-vsc:
+    type: VirtualService.Istio
+    namespace: default
+    settings:
+      hosts:
+        - "bookinfo.meshery.io"
+      gateways:
+        - sample-app-gateway
+      http:
+        - match:
+            - uri:
+                exact: /productpage
+            - uri:
+                prefix: /static
+            - uri:
+                exact: /login
+            - uri:
+                exact: /logout
+            - uri:
+                prefix: /api/v1/products
+          route:
+            - destination:
+                host: productpage
+                port:
+                  number: 9080
+
+  productpage.dr:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: productpage
+      subsets:
+        - name: v1
+          labels:
+            version: v1
+  
+  reviews.dr:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: reviews
+      subsets:
+        - name: v1
+          labels:
+            version: v1
+        - name: v2
+          labels:
+            version: v2
+        - name: v3
+          labels:
+            version: v3
+
+  ratings.dr:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: ratings
+      subsets:
+        - name: v1
+          labels:
+            version: v1
+        - name: v2
+          labels:
+            version: v2
+        - name: v2-mysql
+          labels:
+            version: v2-mysql
+        - name: v2-mysql-vm
+          labels:
+            version: v2-mysql-vm
+
+  details.dr:
+    type: DestinationRule.Istio
+    namespace: default
+    settings:
+      host: reviews
+      subsets:
+        - name: v1
+          labels:
+            version: v1
+        - name: v2
+          labels:
+            version: v2
