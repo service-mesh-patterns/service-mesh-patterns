@@ -9,21 +9,66 @@
 
 This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastruture and application deployments and applying best practices.
 
-A service mesh is a layer in your infrastructure that facilitates communication between services… and so much more. Its value is enormous, and the value you derive from one is very much related to what role you play in the design, implementation, and operations of your cloud native applications and infrastructure. Service mesh patterns help you get the most out of Linkerd, Consul, App Mesh, Istio, Kuma, Open Service Mesh or <a href="https://layer5.io/service-mesh-landscape">any service mesh</a>, including those using Envoy and use of WebAssembly. Each pattern can be used as a template and is customizable. 
+A service mesh is a layer in your infrastructure that facilitates communication between services… and so much more. Its value is enormous, and the value you derive from one is very much related to what role you play in the design, implementation, and operations of your cloud native applications and infrastructure. Service mesh patterns help you get the most out of Linkerd, Consul, App Mesh, Istio, Kuma, Open Service Mesh or <a href="https://layer5.io/service-mesh-landscape">any service mesh</a>, including those using Envoy and use of WebAssembly. Each pattern can be used as a template and is customizable.
 
 ## What are Service Mesh Patterns?
+
 This feature area is under active development. Until additional documentation is published, see <a href="https://docs.google.com/document/d/1B2N78EdRiZF-yVo1-HY3syppwBBDumgMuYg6seD-AJ4/edit#"> the Meshery and Service Mesh Patterns</a> design specification for further details.
+
 <p align="center">
     <img width="80%" src=".github/readme/images/service-mesh-patterns-at-kubecon-china0-2021.svg">
 </p>
 
 ## Prototyping Pattern Files and their Orchestration
+
 Interpreting Pattern files in Meshery
+
 <p align="center">
     <img width="80%" src=".github/readme/images/Meshery-Patterns-with-OAM.png">
 </p>
 
 <div>&nbsp;</div>
+
+## Using Meshery to Deploy a Service Mesh Pattern
+
+You can use Meshery to deploy a service mesh pattern. Service mesh patterns are detailed as a YAML file.
+See the <a href="https://docs.meshery.io/guides/configuration-management">Configuration Management</a> guide.
+
+### Pattern Repository
+
+You may bring your own patterns or find them available through your chosen provider. Each service mesh pattern carries a unique identifier for reference.
+
+For Further detailed information, you can have a look at <a href="https://docs.meshery.io/functionality/pattern-management#pattern-repository">Pattern Repository Section</a>
+
+## Importing Patterns
+
+You can import a pattern using `mesheryctl` or Meshery UI. Patterns can be imported from your local filesystem, an HTTP/S endpoint, or from GitHub. When provided a GitHub location (org/repo), Meshery will recursively search the given directory (or the entire repository) for existing pattern files.
+
+### Using Meshery CLI
+
+### To import a pattern,execute this command:
+
+```
+$ mesheryctl pattern import -f <path to the pattern>
+Importing pattern…
+Pattern successfully imported.
+```
+
+### Using Meshery UI:
+
+From Meshery UI, patterns can be imported from your local filesystem or imported from a remote URL.
+
+<p align="center">
+    <img width="80%" src=".github/readme/images/ImportPatternUI.png">
+</p>
+
+To upload from url click the link icon
+
+<p align="center">
+    <img width="80%" src=".github/readme/images/UrlImport.png">
+</p>
+
+In case of any doubts and clarifications, you can always have a look at the <a href="https://docs.meshery.io/">Meshery Documentation</a>
 
 ## Join the service mesh community!
 
@@ -38,6 +83,7 @@ Our projects are community-built and welcome collaboration. 👍 Be sure to see 
 Become a <b>Meshtee</b> today!</p>
 
 Find out more on the <a href="https://layer5.io/community">Layer5 community</a>. <br />
+
 </p>
 
 <div>&nbsp;</div>
