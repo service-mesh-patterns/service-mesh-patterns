@@ -28,7 +28,7 @@ jobs:
           driver: docker
 
       - name: Apply Pattern
-        uses: hershd23/mesheryctl-service-mesh-patterns-action@pattern-import-apply-ci
+        uses: hershd23/meshery-service-mesh-patterns-action@pattern-import-apply-ci
         with:
           provider_token: ${{ github.event.inputs.provider_token }}
           platform: ${{ github.event.inputs.platform }}
