@@ -1,23 +1,35 @@
-name: Mesheryctl Pattern Action
+name: Apply Service Mesh Pattern with Meshery
 on:
-  push:
-    branches:
-      - 'master'
-  # if manually triggering, provide a provider token yourself
   workflow_dispatch:
     inputs:
       provider_token:
-        description: "Meshery auth token"
-        required: true
+        description: "Provider token to use"
+        required: false
+      platform:
+        description: "Platform to deploy Meshery to"
+        required: false
+      pattern_url:
+        description: "URL of the pattern to be deployed"
+        required: false
+      pattern_file:
+        description: "Name of the pattern file relative to the .github folder"
+        required: false
 
 jobs:
-  job1:
-    name: Mesheryctl Pattern Actions 
+  apply-pattern-file:
+    name: Meshery Pattern Apply 
     runs-on: ubuntu-latest
     steps:
-      - name: mesheryctl pattern action
-        uses: sayantan1413/mesheryctl-service-mesh-patterns-action@master
+      - name: Setup Kubernetes
+        uses: manusa/actions-setup-minikube@v2.4.1
+        with:
+          minikube version: 'v1.23.2'
+          kubernetes version: 'v1.22.2'
+          driver: docker
+
+      - name: Apply Pattern
+        uses: hershd23/mesheryctl-service-mesh-patterns-action@pattern-import-apply-ci
         with:
           provider_token: ${{ github.event.inputs.provider_token }}
-          platform: docker
-          url: https://raw.githubusercontent.com/service-mesh-patterns/service-mesh-patterns/master/samples/IstioFilterPattern.yaml
+          platform: ${{ github.event.inputs.platform }}
+          pattern_url: ${{ github.event.inputs.pattern_url }}
