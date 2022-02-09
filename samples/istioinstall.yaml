@@ -1,0 +1,17 @@
+name: user
+vars:
+  controlplaneNS: istio-system
+  namespace: default
+  istioVersion: 1.12.0
+  profile: default
+services:
+  istioservicemesh:
+    type: IstioMesh
+    namespace:  $(#ref.vars.controlplaneNS)
+    settings:
+      version: $(#ref.vars.istioVersion)
+      profile: $(#ref.vars.profile)
+    traits:
+      automaticSidecarInjection:
+        namespaces:
+          - $(#ref.vars.namespace)

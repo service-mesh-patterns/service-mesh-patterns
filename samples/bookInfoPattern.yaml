@@ -1,8 +1,10 @@
 name: MesheryGeneratedPatternFile
+vars:
+  namespace: default #if not configured from importing pattern or when this is used as a standalone pattern
 services:
   bookinfo-vs:
     type: VirtualService.Istio
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       gateways:
       - sample-app-gateway
@@ -31,7 +33,7 @@ services:
             port:
               number: 9080
       name: bookinfo-vs
-      namespace: default
+      namespace: $(#ref.vars.namespace)
     traits:
       meshmap:
         edges:
@@ -44,7 +46,7 @@ services:
           posY: 320.00211735005496
   details:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -56,7 +58,7 @@ services:
         - containerPort: 9080
           name: http
       name: details
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -68,7 +70,7 @@ services:
           posY: 388.85606569789246
   productpage:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -80,7 +82,7 @@ services:
         - containerPort: 9080
           name: http
       name: productpage
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -96,7 +98,7 @@ services:
           posY: 320.0015880125412
   ratings:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -108,7 +110,7 @@ services:
         - containerPort: 9080
           name: http
       name: ratings
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -120,10 +122,10 @@ services:
           posY: 391
   reviews:
     type: Service.K8s
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       name: reviews
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       spec:
         ports:
         - name: http
@@ -146,7 +148,7 @@ services:
           posY: 193.99797562654356
   reviews-v1:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -160,7 +162,7 @@ services:
         - containerPort: 9080
           name: http
       name: reviews-v1
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -173,7 +175,7 @@ services:
           posY: 147.36074939087763
   reviews-v2:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -187,7 +189,7 @@ services:
         - containerPort: 9080
           name: http
       name: reviews-v2
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -200,7 +202,7 @@ services:
           posY: 205.00335247092036
   reviews-v3:
     type: Application
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       advanced:
         labels:
@@ -214,7 +216,7 @@ services:
         - containerPort: 9080
           name: http
       name: reviews-v3
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       replicas: 1
     traits:
       meshmap:
@@ -229,10 +231,10 @@ services:
           posY: 268.69329017003173
   sample-app-gateway:
     type: Gateway.Istio
-    namespace: default
+    namespace: $(#ref.vars.namespace)
     settings:
       name: sample-app-gateway
-      namespace: default
+      namespace: $(#ref.vars.namespace)
       selector:
         istio: ingressgateway
       servers:
