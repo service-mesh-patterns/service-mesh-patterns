@@ -84,18 +84,18 @@ services:
       name: productpage
       namespace: $(#ref.vars.namespace)
       replicas: 1
-    traits:
-      meshmap:
-        edges:
-        - from: $(#ref.services.bookinfo-vs.id)
-          to: $(#ref.services.productpage.id)
-        - from: $(#ref.services.productpage.id)
-          to: $(#ref.services.reviews.id)
-        - from: $(#ref.services.productpage.id)
-          to: $(#ref.services.details.id)
-        position:
-          posX: 281.0063520501649
-          posY: 320.0015880125412
+    # traits:
+    #   meshmap:
+    #     edges:
+    #     - from: $(#ref.services.bookinfo-vs.id)
+    #       to: $(#ref.services.productpage.id)
+    #     - from: $(#ref.services.productpage.id)
+    #       to: $(#ref.services.reviews.id)  # dependency on reviews service
+    #     - from: $(#ref.services.productpage.id)
+    #       to: $(#ref.services.details.id)
+    #     position:
+    #       posX: 281.0063520501649
+    #       posY: 320.0015880125412
   ratings:
     type: Application
     namespace: $(#ref.vars.namespace)
@@ -120,32 +120,33 @@ services:
         position:
           posX: 649
           posY: 391
-  reviews:
-    type: Service.K8s
-    namespace: $(#ref.vars.namespace)
-    settings:
-      name: reviews
-      namespace: $(#ref.vars.namespace)
-      spec:
-        ports:
-        - name: http
-          port: 9080
-        selector:
-          custom.app: reviews
-    traits:
-      meshmap:
-        edges:
-        - from: $(#ref.services.productpage.id)
-          to: $(#ref.services.reviews.id)
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v2.id)
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v3.id)
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v1.id)
-        position:
-          posX: 400.9957488157415
-          posY: 193.99797562654356
+  ## TODO: Uncomment below when K8s component registration is fixed
+  # reviews:
+  #   type: Service.K8s
+  #   namespace: $(#ref.vars.namespace)
+  #   settings:
+  #     name: reviews
+  #     namespace: $(#ref.vars.namespace)
+  #     spec:
+  #       ports:
+  #       - name: http
+  #         port: 9080
+  #       selector:
+  #         custom.app: reviews
+  #   traits:
+  #     meshmap:
+  #       edges:
+  #       - from: $(#ref.services.productpage.id)
+  #         to: $(#ref.services.reviews.id)
+  #       - from: $(#ref.services.reviews.id)
+  #         to: $(#ref.services.reviews-v2.id)
+  #       - from: $(#ref.services.reviews.id)
+  #         to: $(#ref.services.reviews-v3.id)
+  #       - from: $(#ref.services.reviews.id)
+  #         to: $(#ref.services.reviews-v1.id)
+  #       position:
+  #         posX: 400.9957488157415
+  #         posY: 193.99797562654356
   reviews-v1:
     type: Application
     namespace: $(#ref.vars.namespace)
@@ -164,15 +165,15 @@ services:
       name: reviews-v1
       namespace: $(#ref.vars.namespace)
       replicas: 1
-    traits:
-      meshmap:
-        edges:
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v1.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
-        position:
-          posX: 534.1172892338158
-          posY: 147.36074939087763
+    # traits:
+    #   meshmap:
+    #     edges:
+    #     - from: $(#ref.services.reviews.id)
+    #       to: $(#ref.services.reviews-v1.id)
+    #     parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+    #     position:
+    #       posX: 534.1172892338158
+    #       posY: 147.36074939087763
   reviews-v2:
     type: Application
     namespace: $(#ref.vars.namespace)
@@ -191,15 +192,15 @@ services:
       name: reviews-v2
       namespace: $(#ref.vars.namespace)
       replicas: 1
-    traits:
-      meshmap:
-        edges:
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v2.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
-        position:
-          posX: 536.3224484379678
-          posY: 205.00335247092036
+    # traits:
+    #   meshmap:
+    #     edges:
+    #     - from: $(#ref.services.reviews.id)
+    #       to: $(#ref.services.reviews-v2.id)
+    #     parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+    #     position:
+    #       posX: 536.3224484379678
+    #       posY: 205.00335247092036
   reviews-v3:
     type: Application
     namespace: $(#ref.vars.namespace)
@@ -218,17 +219,17 @@ services:
       name: reviews-v3
       namespace: $(#ref.vars.namespace)
       replicas: 1
-    traits:
-      meshmap:
-        edges:
-        - from: $(#ref.services.reviews-v3.id)
-          to: $(#ref.services.ratings.id)
-        - from: $(#ref.services.reviews.id)
-          to: $(#ref.services.reviews-v3.id)
-        parent: d29c1858-d417-40bf-88fa-a8220adefd4d
-        position:
-          posX: 537.5467581185748
-          posY: 268.69329017003173
+    # traits:
+    #   meshmap:
+    #     edges:
+    #     - from: $(#ref.services.reviews-v3.id)
+    #       to: $(#ref.services.ratings.id)
+    #     - from: $(#ref.services.reviews.id)
+    #       to: $(#ref.services.reviews-v3.id)
+    #     parent: d29c1858-d417-40bf-88fa-a8220adefd4d
+    #     position:
+    #       posX: 537.5467581185748
+    #       posY: 268.69329017003173
   sample-app-gateway:
     type: Gateway.Istio
     namespace: $(#ref.vars.namespace)
