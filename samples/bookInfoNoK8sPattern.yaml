@@ -52,7 +52,7 @@ services:
         labels:
           version: v1
       containers:
-      - image: docker.io/istio/examples-bookinfo-details-v1:1.16.2
+      - image: docker.io/istio/examples-bookinfo-details-v1:latest
         name: details
         ports:
         - containerPort: 9080
@@ -76,7 +76,7 @@ services:
         labels:
           version: v1
       containers:
-      - image: docker.io/istio/examples-bookinfo-productpage-v1:1.16.2
+      - image: docker.io/istio/examples-bookinfo-productpage-v1:latest
         name: productpage
         ports:
         - containerPort: 9080
@@ -104,7 +104,7 @@ services:
         labels:
           version: v1
       containers:
-      - image: docker.io/istio/examples-bookinfo-ratings-v1:1.16.2
+      - image: docker.io/istio/examples-bookinfo-ratings-v1:latest
         name: ratings
         ports:
         - containerPort: 9080
@@ -157,7 +157,7 @@ services:
           version: v1
         create_service: false
       containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.2
+      - image: docker.io/istio/examples-bookinfo-reviews-v1:latest
         name: reviews
         ports:
         - containerPort: 9080
@@ -184,7 +184,7 @@ services:
           version: v2
         create_service: false
       containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.2
+      - image: docker.io/istio/examples-bookinfo-reviews-v2:latest
         name: reviews
         ports:
         - containerPort: 9080
@@ -211,7 +211,7 @@ services:
           version: v3
         create_service: false
       containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.2
+      - image: docker.io/istio/examples-bookinfo-reviews-v3:latest
         name: reviews
         ports:
         - containerPort: 9080
