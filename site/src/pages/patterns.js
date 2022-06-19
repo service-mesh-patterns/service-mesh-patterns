@@ -9,7 +9,7 @@ const Patterns = () => {
   return (
     <>
       <SeoComponent
-        title="Service Mesh Patterns - Patterns in-Action"
+        title="Service Mesh Patterns - Design Patterns in-Action"
         description="Learn how to put cloud native patterns to use"
       />
       <Layout>
