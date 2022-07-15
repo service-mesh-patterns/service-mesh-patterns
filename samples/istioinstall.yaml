@@ -8,8 +8,9 @@ services:
   istioservicemesh:
     type: IstioMesh
     namespace:  $(#ref.vars.controlplaneNS)
+    version: $(#ref.vars.istioVersion)
     settings:
-      version: $(#ref.vars.istioVersion)
+      version: $(#ref.vars.istioVersion) #Version from here has been deprecated and will be removed soon after
       profile: $(#ref.vars.profile)
     traits:
       automaticSidecarInjection:
