@@ -11,7 +11,7 @@ const Authors = () => {
     <>
       <SeoComponent
         title="Authors"
-        description="Meet the authors of the Service Mesh Patterns book"
+        description="Meet the authors of the Service Mesh Patterns book, Lee Calcote"
       />
       <Layout>
         <Navbar />
