@@ -3,7 +3,7 @@ name: 🛠 Continuous Integration / DevOps
 about: Improve or update workflows or other automation
 title: '[CI]'
 labels: 'area/ci'
-assignees: ''
+assignees: 
 ---
 #### Current Behavior
 <!-- A brief description of what the problem is. (e.g. I need to be able to...) -->
