@@ -2,7 +2,7 @@
 name: 🖥 Site Update
 about: Suggest an update to the Service Mesh Patterns website
 title: '[Site] '
-labels: 'area/website', 'framework/gatsbyjs'
+labels: ['area/website', 'framework/gatsbyjs']
 assignees: ''
 ---
 **Current State of the Service Mesh Patterns site**
