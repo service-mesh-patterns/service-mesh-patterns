@@ -1,0 +1,45 @@
+{
+  "name": "service-mesh-patterns",
+  "version": "1.0.0",
+  "private": true,
+  "description": "service-mesh-patterns",
+  "author": "Service Mesh Pattern Authors",
+  "keywords": [
+    "gatsby"
+  ],
+  "scripts": {
+    "develop": "gatsby develop",
+    "start": "gatsby develop",
+    "build": "gatsby build",
+    "serve": "gatsby serve",
+    "clean": "gatsby clean && rimraf node_modules",
+    "lint": "eslint --fix .",
+    "pretest": "eslint --ignore-path .gitignore .",
+    "noIndex": "gatsby build && echo 'User-agent: *\nDisallow: /' > public/robots.txt",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "babel-plugin-styled-components": "^2.0.7",
+    "babel-preset-gatsby": "^2.19.0",
+    "gatsby": "^4.19.2",
+    "gatsby-plugin-image": "^2.19.0",
+    "gatsby-plugin-react-helmet": "^5.19.0",
+    "gatsby-plugin-sharp": "^4.19.0",
+    "gatsby-plugin-sitemap": "^5.19.0",
+    "gatsby-plugin-styled-components": "^5.19.0",
+    "gatsby-source-filesystem": "^4.19.0",
+    "gatsby-transformer-sharp": "^4.19.0",
+    "husky": "^8.0.1",
+    "react": "^18.1.0",
+    "react-dom": "^18.1.0",
+    "react-helmet": "^6.1.0",
+    "rimraf": "^3.0.2",
+    "styled-components": "^5.3.5"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.18.9",
+    "@babel/eslint-parser": "^7.18.9",
+    "eslint": "^7.32.0",
+    "husky": "^8.0.0"
+  }
+}
