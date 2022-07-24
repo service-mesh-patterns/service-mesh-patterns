@@ -1,6 +1,6 @@
 ---
 name: 🛠 Continuous Integration / DevOps
-description: Improve or update workflows or other automation
+about: Improve or update workflows or other automation
 title: '[CI]'
 labels: 'area/ci'
 assignees: 'maintainers'
