@@ -1,4 +1,4 @@
-### Initial Set of Maintainers
+### Maintainers
 
 | Name                    | GitHub           | Affiliation |
 | ------------------      | -----------      | ----------- |
