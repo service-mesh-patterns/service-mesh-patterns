@@ -14,6 +14,7 @@
     "serve": "gatsby serve",
     "clean": "gatsby clean && rimraf node_modules",
     "lint": "eslint --fix .",
+    "checklint": "eslint",
     "pretest": "eslint --ignore-path .gitignore .",
     "noIndex": "gatsby build && echo 'User-agent: *\nDisallow: /' > public/robots.txt",
     "prepare": "husky install"
