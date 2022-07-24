@@ -13,10 +13,10 @@ assignees: ''
 
 ---
 ### Contributor Resources
+This website uses React and GitHub Pages. Site content is found under the [`master` branch](https://github.com/service-mesh-books/service-mesh-patterns/tree/master/src).
+- See the [Contributing to Service Mesh Patterns Website](https://github.com/service-mesh-patterns/service-mesh-patterns/#readme) section of the readme.md and other [contributing instructions](https://docs.meshery.io/project/contributing), too.
 - Layer5 [Brand Kit](https://layer5.io/company/brand)
 - 📑 [Service Mesh Patterns in Meshery Catalog](https://meshery.io/catalog)
 - 📖 [Service Mesh Patterns Book](https://layer5.io/learn/service-mesh-books/service-mesh-patterns)
 - 🎨 [Site designs in Figma](https://www.figma.com/file/5ZwEkSJwUPitURD59YHMEN/Layer5-Designs?node-id=5310%3A0). Fill-in the [Layer5 Community Member Form](https://layer5.io/newcomer) and join the [Layer5 Community Slack](http://slack.layer5.io) for access.
-- See the [Contributing to Service Mesh Patterns Website](https://github.com/service-mesh-patterns/service-mesh-patterns/#readme) section of the readme.md and other [contributing instructions](https://docs.meshery.io/project/contributing), too.
-- This website uses React and GitHub Pages. Site content is found under the [`master` branch](https://github.com/service-mesh-books/service-mesh-patterns/tree/master/src).
 - 🙋🏾🙋🏼 Questions: [Discussion Forum](https://discuss.layer5.io) and [Community Slack](http://slack.layer5.io)
