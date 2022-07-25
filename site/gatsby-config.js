@@ -3,9 +3,9 @@ module.exports = {
     title: "Service Mesh Patterns",
     description:
       "Expect more from your infrastructure. Cloud native, open source software for your cloud native infrastructure and applications. Allowing developers to focus on business logic, not infrastructure concerns. Empowering operators to confidentally run modern infrastructure.",
-    siteUrl: "http://service-mesh-patterns.github.io/",
+    siteUrl: "https://service-mesh-patterns.github.io/service-mesh-patterns/",
     author: "Service Mesh Pattern Authors",
-    permalink: "http://service-mesh-patterns.github.io/",
+    permalink: "https://service-mesh-patterns.github.io/service-mesh-patterns/",
     image: "/images/service-mesh-pattern.png",
   },
   plugins: [

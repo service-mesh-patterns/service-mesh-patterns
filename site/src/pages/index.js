@@ -8,10 +8,10 @@ const IndexPage = () => {
     "@context": "https://schema.org",
     "@type": "Book",
     "name": "Service Mesh Patterns",
-    "url": "http://service-mesh-patterns.github.io/",
-    "logo": "https://service-mesh-patterns.github.io/images/service-mesh-pattern.png",
+    "url": "https://service-mesh-patterns.github.io/service-mesh-patterns/",
+    "logo": "https://service-mesh-patterns.github.io/service-mesh-patterns/images/service-mesh-pattern.png",
     "sameAs": [
-      "https://github.com/service-mesh-patterns",
+      "https://github.com/service-mesh-patterns/service-mesh-patterns",
     ]
   };
   return (
