@@ -11,6 +11,18 @@ module.exports = {
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
+    {
+      resolve: "gatsby-plugin-manifest",
+      options: {
+        name: "manifest",
+        short_name: "starter",
+        start_url: "/",
+        background_color: "#3c494f",
+        theme_color: "#00b39f",
+        display: "minimal-ui",
+        icon: "site/src/assets/images/favicon.png", // This path is relative to the root of the site.
+      },
+    },
     "gatsby-plugin-image",
     {
       resolve: "gatsby-plugin-sharp",
