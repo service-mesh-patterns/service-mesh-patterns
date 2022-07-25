@@ -1,0 +1,7 @@
+name: Provision Istio
+services:
+  istio:
+    type: IstioMesh
+    namespace: istio-system
+    settings:
+      version: 1.12.0
