@@ -17,7 +17,7 @@
     "checklint": "eslint .",
     "pretest": "eslint --ignore-path .gitignore .",
     "noIndex": "gatsby build && echo 'User-agent: *\nDisallow: /' > public/robots.txt",
-    "prepare": "husky install"
+    "prepare": "cd .. && husky install"
   },
   "dependencies": {
     "babel-plugin-styled-components": "^2.0.7",
