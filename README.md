@@ -1,9 +1,13 @@
 <div align="center">
 <h1 align="center">Service Mesh Patterns</h1>
 </div>
-<p align="center">
-    <img width="60%" src=".github/readme/images/logo_with_text.svg">
-</p>
+<div>
+    <p align="left" justify-content="space-between">
+        <img width="35%" src=".github/readme/images/service-mesh-pattern-text.svg"> 
+        <img width="35%" align="right" src=".github/readme/images/service-mesh-pattern-text_white.svg">
+    </p>
+
+</div>
 
 <h5><p align="center"><i>If you’re using this project or simply like its concept, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
 
