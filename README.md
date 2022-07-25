@@ -6,9 +6,7 @@
         <img width="35%" src=".github/readme/images/service-mesh-pattern-text.svg"> 
         <img width="35%" align="right" src=".github/readme/images/service-mesh-pattern-text_white.svg">
     </p>
-
 </div>
-
 <h5><p align="center"><i>If you’re using this project or simply like its concept, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
 
 This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastruture and application deployments and applying best practices.
