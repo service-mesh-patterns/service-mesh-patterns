@@ -8,6 +8,7 @@ module.exports = {
     permalink: "https://service-mesh-patterns.github.io/service-mesh-patterns/",
     image: "/images/service-mesh-pattern.png",
   },
+  pathPrefix: "/service-mesh-patterns",
   plugins: [
     "gatsby-plugin-react-helmet",
     "gatsby-plugin-sitemap",
@@ -16,7 +17,7 @@ module.exports = {
       options: {
         name: "manifest",
         short_name: "starter",
-        start_url: "/",
+        start_url: "/service-mesh-patterns/",
         background_color: "#3c494f",
         theme_color: "#00b39f",
         display: "minimal-ui",
