@@ -1,4 +1,5 @@
 import * as React from "react";
+import Layout from "../components/layout";
 import SeoComponent from "../components/seo";
 // import Hero from "../sections/Hero";
 
@@ -18,13 +19,13 @@ const IndexPage = () => {
     <>
       <SeoComponent title="Service Mesh Patterns" description="Service Mesh Patterns - Expect more from your infrastructure"
         schemaMarkup={schema} />
-      <main>
+      <Layout>
         <h1>Service Mesh Patterns - Coming Soon....</h1>
         {/* <Navbar />
         <Hero />
         <AboutBook />
         <Footer /> */}
-      </main>
+      </Layout>
     </>
   );
 };

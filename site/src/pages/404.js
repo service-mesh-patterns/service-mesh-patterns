@@ -1,6 +1,7 @@
 import * as React from "react";
 import { Link } from "gatsby";
 import SeoComponent from "../components/seo";
+import Layout from "../components/layout";
 
 
 // styles
@@ -16,8 +17,8 @@ const codeStyles = {
 const NotFoundPage = () => {
   return (
     <>
-      <main>
-        <SeoComponent title="What a mesh!" />
+      <SeoComponent title="What a mesh!" />
+      <Layout>
         <h1>Page not found</h1>
         <p>
           Sorry{" "}
@@ -36,7 +37,7 @@ const NotFoundPage = () => {
           <br />
           <Link to="/">Go home</Link>.
         </p>
-      </main>
+      </Layout>
     </>
   );
 };
