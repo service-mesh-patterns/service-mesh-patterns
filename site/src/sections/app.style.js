@@ -28,6 +28,7 @@ html{
 
 body,html {
     margin: 0;
+    background-color: ${(props) => props.theme.primaryColor};
 }
 
 body {
@@ -136,7 +137,6 @@ a {
   img{
     max-width: 100%;
   }
-
 
 section{
     position: relative;
