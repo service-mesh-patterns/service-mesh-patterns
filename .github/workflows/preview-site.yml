@@ -31,7 +31,7 @@ jobs:
         id: netlify
         uses: nwtgck/actions-netlify@v1.1
         with:
-          publish-dir: 'public'
+          publish-dir: 'site/public'
           production-deploy: false
           github-token: ${{ secrets.GH_ACCESS_TOKEN }}
           enable-commit-comment: false
