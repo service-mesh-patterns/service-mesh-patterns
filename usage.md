@@ -2,7 +2,9 @@
 ---
 
 ## *Pre-requisites and Purpose*
-Each pattern/design in this repository has a comment on top defining the `Pre-requisites` in your infrastructure for a successful deployment along with the `Description` of the design, which is the expected result of deploying that specific design. If you wish to contribute in this repository with your designs, it will be recommended to follow the below convention to make your designs readable to other people. 
+Each pattern/design in this repository includes any `Pre-requisites` necessary to ensure a successful deployment. Each pattern/design's `Description` defines the expected result of a deployment of the respective design.  If defined, the `Caveat` section highlights any known pitfalls to be aware of.
+
+Create and share your own designs. When you do, please adhere to the same convention of including pre-requisites and descriptions, so that your design's purpose and anticipated outcome is easily comprehendible to those that might use your design.
 ```
 #Pre-requisite: ...
 #Description: ...
