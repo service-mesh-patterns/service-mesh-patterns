@@ -1,5 +1,5 @@
 #Pre-requisite: A running Istio control plane in a Kubernetes cluster
-#Description: This Patternfile deploys Istio's demo Book info application in default namespace
+#Description: This design deploys Open Service Mesh's "Book Store" sample application into the `bookstore` namespace. Sample applications from one service mesh project can be deployed to different service mesh.
 name: BookInfoApp
 vars:
   namespace: default #if not configured from importing pattern or when this is used as a standalone pattern
