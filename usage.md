@@ -1,6 +1,14 @@
 # Features in patterns and how to use them efficiently-
 ---
 
+## *Pre-requisites and Purpose*
+Each pattern/design in this repository includes any `Pre-requisites` necessary to ensure a successful deployment. Each pattern/design's `Description` defines the expected result of a deployment of the respective design.  If defined, the `Caveat` section highlights any known pitfalls to be aware of.
+
+Create and share your own designs. When you do, please adhere to the same convention of including pre-requisites and descriptions, so that your design's purpose and anticipated outcome is easily comprehendible to those that might use your design.
+```
+#Pre-requisite: ...
+#Description: ...
+```
 ## *DependsOn* 
 Each service inside a pattern file has a dependsOn field which is an array of all the services that the current service depends on. This field should be used when the deployment of one of the service depends on some other set of services to be deployed once. Pattern engine creates a directed acyclic graphs of your services and does a concurrent graph processing to avoid unnecessary wait time. A good example of this would be when you want to deploy your app in a service but the prerequisite of your app is that the istio control plane should be running. You can create IstioInstallation as a service and add this service in the dependsOn array of your app's service. This way, first the istio control plane will be deployed and then you app. Refer to /samples/minimalistiobookinfo.yaml
 
