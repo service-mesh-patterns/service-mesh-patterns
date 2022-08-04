@@ -1,3 +1,5 @@
+#Pre-requisite: A Kubernetes cluster 
+#Description: This Patternfile installs Spire with the default configuration
 name: SPIRE-ready Istio
 services:
   0b9a899c-4a9e-4420-90df-51f74c7fb243:

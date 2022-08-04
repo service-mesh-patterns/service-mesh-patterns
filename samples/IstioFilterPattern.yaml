@@ -1,8 +1,10 @@
+#Pre-requisite: A Kubernetes cluster  with a running Istio control plane
+#Description: This Patternfile injects rate limiter filter in the dataplane in istio-test namespace
 name: ImageHubRateLimit
 version: 0.0.1
 services:
   generic-istio-filter:
-    type: EnvoyFilterIstio
+    type: EnvoyFilter.Istio
     namespace: istio-test
     settings:
       configPatches:
@@ -33,7 +35,7 @@ services:
           version: v1
 
   ratelimit-filter:
-    type: EnvoyFilterIstio
+    type: EnvoyFilter.Istio
     namespace: istio-test
     settings:
       configPatches:
