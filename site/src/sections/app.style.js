@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
     font-family: 'Qanelas Soft', 'Open Sans', sans-serif;
-    color: ${(props) => props.theme.tertiaryColor};
+    color: ${(props) => props.theme.white};
     margin: 0;
     line-height: normal;
 }
@@ -129,9 +129,9 @@ p {
 
 a {
     text-decoration: none;
-    color: ${(props) => props.theme.linkColor};
+    color: ${(props) => props.theme.white};
     &:hover{
-        color: ${(props) => props.theme.primaryColor};
+        color: ${(props) => props.theme.linkColor};
     }
   }
   img{
@@ -140,6 +140,10 @@ a {
 
 section{
     position: relative;
+}
+
+span{
+  color:${(props) => props.theme.linkColor}
 }
 
 `;
