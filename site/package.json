@@ -20,13 +20,9 @@
     "prepare": "cd .. && husky install"
   },
   "dependencies": {
-    "@emotion/react": "^11.10.0",
-    "@emotion/styled": "^11.10.0",
-    "@material-ui/core": "^4.12.4",
-    "@mui/material": "^5.9.3",
     "babel-plugin-styled-components": "^2.0.7",
     "babel-preset-gatsby": "^2.19.0",
-    "gatsby": "^4.20.0",
+    "gatsby": "^4.19.2",
     "gatsby-plugin-image": "^2.19.0",
     "gatsby-plugin-manifest": "^4.19.0",
     "gatsby-plugin-react-helmet": "^5.19.0",

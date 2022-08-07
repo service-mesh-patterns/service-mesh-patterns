@@ -53,7 +53,7 @@ h4,
 h5,
 h6 {
     font-family: 'Qanelas Soft', 'Open Sans', sans-serif;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.tertiaryColor};
     margin: 0;
     line-height: normal;
 }
@@ -129,9 +129,9 @@ p {
 
 a {
     text-decoration: none;
-    color: ${(props) => props.theme.white};
+    color: ${(props) => props.theme.linkColor};
     &:hover{
-        color: ${(props) => props.theme.linkColor};
+        color: ${(props) => props.theme.primaryColor};
     }
   }
   img{
