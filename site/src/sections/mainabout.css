@@ -15,7 +15,7 @@
     background: #FFFFFF;
 }
 .heading{
-    color: #FFFFFF;
+    color: #3C494F;
     width: 1072px;
     height: 45px;
     font-family: 'Qanelas Soft';
@@ -91,3 +91,8 @@
     color: #3C494F;
     align-self: stretch;
 }
+/* green col ::-moz-list-bullet */
+ul {list-style: none}
+li::before {content: "•"; color: #00B39F;
+    display: inline-block; width: 1em;
+    margin-left: -1em};
