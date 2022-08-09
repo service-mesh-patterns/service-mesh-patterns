@@ -1,11 +1,13 @@
 import styled from "styled-components";
-export const NavStyleWrapper = styled.div`
+
+export  const NavStyleWrapper = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
     padding: 28px 184px;
-    gap: 400px;
+    gap: 150px;
+    padding-right: 70px;
     position: absolute;
     width: 1440px;
     height: 110px;
@@ -13,14 +15,56 @@ export const NavStyleWrapper = styled.div`
     top: 0px;
     background: #FFFFFF;
     box-shadow: 0px 10px 25px rgba(0, 179, 159, 0.2);
-    div{
-        width: 68px;
+    .text{
+        width: 88px;
+        height: 44px;
+        
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 22px;
+        
+        color: #3C494F;
+
+    }
+    .pattern{
+        // position: relative;
+        // top: 75px;
+        width: 100px;
+    }
+    .button{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 20px 32px;
+
+        width: 149px;
+        height: 56px;
+        background: #00B39F;
+        border-radius: 4px;
+    }
+    .label{
+        width: 85px;
+        height: 22px;
+
+        font-family: 'Open Sans';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 22px;
+        color: #FFFFFF;
+    }
+    .text1{
+        width: 67px;
         height: 44px;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
         font-size: 16px;
         line-height: 22px;
+
         color: #3C494F;
     }
 `;
