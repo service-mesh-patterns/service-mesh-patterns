@@ -63,6 +63,10 @@ const HeroStyleWrapper = styled.div`
         width: 25%;
         margin-left: 1rem;
 
+        @media(max-width: 500px) {
+            width: auto;
+        }
+
         .icon {
             min-width: 40%;
         }
