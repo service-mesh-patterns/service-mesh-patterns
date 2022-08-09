@@ -33,13 +33,11 @@ const HeroStyleWrapper = styled.div`
         @media(max-width: 950px) {
             width: 90%;
         }
-
-        
     }
     
     .title {
         color: #fff;
-        font-size: 4.6rem;
+        font-size: 3.5rem;
         margin-bottom: .5rem;
         @media(max-width: 750px) {
             font-size: 2.5rem;
@@ -48,26 +46,13 @@ const HeroStyleWrapper = styled.div`
 
     .description {
         color: #fff;
-        font-size: 1.9rem;
-        @media(max-width: 950px) {
-            font-size: 1.5rem;
-        }
+        font-size: 1.5rem;
     }
 
     .credit {
         display: flex;
         justify-content: flex-start;
         align-items: center;
-        gap: 1.25em;
-        
-        
-        h3 {
-            color: #fff;
-            @media(max-width: 950px) {
-                font-size: 1rem;
-            }
-        }
-        
     }
     
     .author {
@@ -76,26 +61,14 @@ const HeroStyleWrapper = styled.div`
         align-items: center;
         gap: .75em;
         width: 25%;
-        margin-right: .75rem;
+        margin-left: 1rem;
 
         .icon {
             min-width: 40%;
         }
 
         .name {
-            font-size: 2rem;
-            font-weight: 600;
-            height: 100%; 
-            line-height: 2.25rem;
             margin-top: 1rem;
-            @media(max-width: 1350px) {
-                font-size: 1.5rem;
-                line-height: 1.5rem;
-            } 
-            @media(max-width: 1050px) {
-                font-size: 1.2rem;
-                line-height: 1.4rem;
-            }
         }
     }
 
@@ -117,7 +90,6 @@ const HeroStyleWrapper = styled.div`
         @media(max-width: 750px) {
             width: 80%;
         }
-        
     }
 
 
