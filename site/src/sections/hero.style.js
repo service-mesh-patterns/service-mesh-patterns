@@ -5,7 +5,6 @@ const HeroStyleWrapper = styled.div`
     width: 100%;
     background-color: #00B39F;
     color: #FFF;
-    font-family: 'Qanelas Soft', 'Open Sans', sans-serif;
     display: flex;
     postion: relative;
     overflow: hidden;
@@ -62,10 +61,8 @@ const HeroStyleWrapper = styled.div`
         gap: 1.25em;
         
         
-        p {
-            margin-top: 1rem;
-            font-size: 1.75rem;
-            font-weight: 450;
+        h3 {
+            color: #fff;
             @media(max-width: 950px) {
                 font-size: 1rem;
             }
@@ -81,10 +78,10 @@ const HeroStyleWrapper = styled.div`
         width: 25%;
         margin-right: .75rem;
 
-        img{
-            width: 40%;
-            height: 40%;
+        .icon {
+            min-width: 40%;
         }
+
         .name {
             font-size: 2rem;
             font-weight: 600;
