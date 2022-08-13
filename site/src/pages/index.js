@@ -5,6 +5,7 @@ import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
 import Footer from "../components/Footer/index";
+import About from "../components/Mainabout";
 
 const IndexPage = () => {
   const schema = {
@@ -42,6 +43,7 @@ const IndexPage = () => {
         <Hero />
         <AboutBook />
         <Footer /> */}
+        <About />
         </SectionWrapper>
       </Layout>
     </>
