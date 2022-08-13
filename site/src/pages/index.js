@@ -4,6 +4,7 @@ import SeoComponent from "../components/seo";
 // import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
+import Navbar from "../components/Navbar";
 
 const IndexPage = () => {
   const schema = {
@@ -29,10 +30,10 @@ const IndexPage = () => {
             <h1 className="center under-construction">Coming Soon...</h1>
             <h3 className="under-construction">See <a href="https://layer5.io/books/service-mesh-patterns">Service Mesh Patterns Book</a></h3>
           </div>
-          {/* <Navbar />
-        <Hero />
+          <Navbar />
+        {/* <Hero />
         <AboutBook />
-        <Footer /> */}
+        <Footer />  */}
         </SectionWrapper>
       </Layout>
     </>

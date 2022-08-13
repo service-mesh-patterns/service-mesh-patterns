@@ -6,7 +6,7 @@ export  const NavStyleWrapper = styled.div`
     justify-content: space-between;
     align-items: center;
     padding: 28px 184px;
-    gap: 150px;
+    gap: 100px;
     padding-right: 70px;
     position: absolute;
     width: 1440px;
@@ -31,7 +31,7 @@ export  const NavStyleWrapper = styled.div`
     .pattern{
         // position: relative;
         // top: 75px;
-        width: 100px;
+        width: 165px;
     }
     .button{
         display: flex;

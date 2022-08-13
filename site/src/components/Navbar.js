@@ -1,8 +1,6 @@
 import React from "react";
 import { NavStyleWrapper } from "../sections/navbar.style";
 import pattern from "../assets/images/brand/SVG/service-mesh-patterns-side.svg";
-import layer5img from "../assets/images/layer5-white-bg.png";
-import five from '../assets/images/brand/SVG/Layer5/L.svg';
 
 const Navbar = () => {
   return (
