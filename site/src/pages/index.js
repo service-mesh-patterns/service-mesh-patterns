@@ -5,7 +5,8 @@ import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
 import Footer from "../components/Footer/index";
-import About from "../components/Mainabout";
+import About from "../sections/About/index";
+
 
 const IndexPage = () => {
   const schema = {
