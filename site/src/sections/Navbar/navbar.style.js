@@ -9,7 +9,7 @@ export  const NavStyleWrapper = styled.div`
     gap: 100px;
     padding-right: 70px;
     position: absolute;
-    width: 1440px;
+    width: auto;
     height: 110px;
     left: calc(50% - 1440px/2);
     top: 0px;

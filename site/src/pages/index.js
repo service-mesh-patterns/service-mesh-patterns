@@ -4,7 +4,7 @@ import SeoComponent from "../components/seo";
 // import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
-import Navbar from "../components/Navbar";
+import Navbar from "../sections/Navbar/index";
 
 const IndexPage = () => {
   const schema = {
