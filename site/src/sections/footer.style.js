@@ -25,6 +25,9 @@ export const Patternsdiv = styled.div`
   justify-content: center;
   width: 18rem;
   height: 100%;
+  p {
+    color: #cccccc;
+  }
 `;
 
 export const Resourcesdiv = styled.div`
@@ -34,7 +37,7 @@ export const Resourcesdiv = styled.div`
   justify-content: center;
   flex-direction: column;
   h3 {
-    color: white;
+    color: #cccccc;
   }
 `;
 
@@ -43,7 +46,7 @@ export const Resourceslink = styled.div`
   gap: 0.3rem;
   flex-direction: column;
   a {
-    color: white;
+    color: #cccccc;
   }
 `;
 
@@ -53,7 +56,7 @@ export const Maildiv = styled.div`
   flex-direction: column;
   justify-content: center;
   h3 {
-    color: white;
+    color: #cccccc;
   }
 `;
 
@@ -72,7 +75,16 @@ export const Icondiv = styled.div`
   display: flex;
   gap: 0.5rem;
   img {
+    padding: 0.1rem;
     height: 30px;
+    width: 32px;
+  }
+  a {
+    padding-right: 15px;
+    filter: grayscale(1) invert(0.25);
+  }
+  a:hover {
+    filter: grayscale(0) invert(0);
   }
 `;
 
