@@ -31,7 +31,7 @@ const IndexPage = () => {
             <h3 className="under-construction">See <a href="https://layer5.io/books/service-mesh-patterns">Service Mesh Patterns Book</a></h3>
           </div>
           <Navbar />
-        {/* <Hero />
+          {/* <Hero />
         <AboutBook />
         <Footer />  */}
         </SectionWrapper>
