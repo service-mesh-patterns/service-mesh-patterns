@@ -6,10 +6,7 @@ import Button from "../reusecore/Button/index";
 
 //assets import
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
-import slack from "../assets/images/socialIcons/slack-light.svg";
-import docker from "../assets/images/socialIcons/docker-light.svg";
 import github from "../assets/images/socialIcons/github-light.svg";
-import linkedin from "../assets/images/socialIcons/linkedin-light.svg";
 
 //styles import
 import {

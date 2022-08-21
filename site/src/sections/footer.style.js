@@ -7,6 +7,12 @@ export const Footerdiv = styled.footer`
   height: 25rem;
   background-color: black;
   align-items: center;
+  @media (max-width: 480px) {
+    height: 55rem;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    height: 50rem;
+  }
 `;
 
 export const Wrapperdiv = styled.div`
@@ -15,6 +21,14 @@ export const Wrapperdiv = styled.div`
   justify-content: center;
   height: 85%;
   gap: 7rem;
+  @media (max-width: 480px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    flex-direction: column;
+    gap: 1rem;
+  }
 `;
 
 export const Patternsdiv = styled.div`
@@ -28,6 +42,26 @@ export const Patternsdiv = styled.div`
   p {
     color: #cccccc;
   }
+  @media (max-width: 480px) {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    img {
+      width: 15rem;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    flex-direction: column;
+    width: 90%;
+    text-align: center;
+    padding-top: 1.5rem;
+    p {
+      font-size: 1.2rem;
+    }
+    img {
+      width: 22rem;
+    }
+  }
 `;
 
 export const Resourcesdiv = styled.div`
@@ -39,6 +73,15 @@ export const Resourcesdiv = styled.div`
   h3 {
     color: #cccccc;
   }
+  @media (max-width: 480px) {
+    text-align: center;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    text-align: center;
+    h3 {
+      font-size: 1.8rem;
+    }
+  }
 `;
 
 export const Resourceslink = styled.div`
@@ -47,6 +90,12 @@ export const Resourceslink = styled.div`
   flex-direction: column;
   a {
     color: #cccccc;
+    font-size: 1rem;
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    a {
+      font-size: 1.1rem;
+    }
   }
 `;
 
@@ -58,6 +107,10 @@ export const Maildiv = styled.div`
   h3 {
     color: #cccccc;
   }
+  @media (min-width: 481px) and (max-width: 767px) {
+    text-align: center;
+    padding-top: 2rem;
+  }
 `;
 
 export const Copyrightdiv = styled.div`
@@ -68,6 +121,24 @@ export const Copyrightdiv = styled.div`
   p {
     color: rgb(204, 204, 204);
     font-size: 1rem;
+  }
+  @media (max-width: 480px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 88%;
+    text-align: center;
+    p {
+      font-size: 0.75rem;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    margin-top: 2rem;
+    flex-direction: column;
+    width: 88%;
+    text-align: center;
+    p {
+      font-size: 0.9rem;
+    }
   }
 `;
 
@@ -85,6 +156,14 @@ export const Icondiv = styled.div`
   }
   a:hover {
     filter: grayscale(0) invert(0);
+  }
+  @media (max-width: 480px) {
+    img {
+      height: 50px;
+    }
+  }
+  @media (min-width: 481px) and (max-width: 767px) {
+    justify-content: center;
   }
 `;
 
@@ -107,5 +186,16 @@ export const Inputdiv = styled.div`
     border: 1px solid rgb(255, 255, 255);
     background-color: rgb(0, 0, 0);
     border-radius: 0.25rem;
+    @media (max-width: 469px) {
+      width: 12rem;
+    }
+    @media (min-width: 481px) and (max-width: 767px) {
+      width: 50vw;
+    }
   }
+
+  /* @media (min-width: 481px) and (max-width: 767px) {
+  }
+  @media (min-width: 768px) and (max-width: 1024px) {
+    }  */
 `;
