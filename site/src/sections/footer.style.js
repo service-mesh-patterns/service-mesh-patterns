@@ -4,15 +4,11 @@ export const Footerdiv = styled.footer`
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 25rem;
+  height: auto;
   background-color: black;
   align-items: center;
-  @media (max-width: 480px) {
-    height: 55rem;
-  }
-  @media (min-width: 481px) and (max-width: 767px) {
-    height: 50rem;
-  }
+  padding-top: 3rem;
+  gap: 2.5rem;
 `;
 
 export const Wrapperdiv = styled.div`
@@ -22,12 +18,18 @@ export const Wrapperdiv = styled.div`
   height: 85%;
   gap: 7rem;
   @media (max-width: 480px) {
+    flex-wrap: nowrap;
     flex-direction: column;
     gap: 1rem;
   }
   @media (min-width: 481px) and (max-width: 767px) {
+    flex-wrap: nowrap;
     flex-direction: column;
     gap: 1rem;
+  }
+  @media (min-width: 768px) and (max-width: 1350px) {
+    flex-wrap: wrap;
+    row-gap: 1.5rem;
   }
 `;
 
@@ -120,7 +122,7 @@ export const Copyrightdiv = styled.div`
   justify-content: space-between;
   p {
     color: rgb(204, 204, 204);
-    font-size: 1rem;
+    font-size: 0.85rem;
   }
   @media (max-width: 480px) {
     margin-top: 2rem;
@@ -137,8 +139,14 @@ export const Copyrightdiv = styled.div`
     width: 88%;
     text-align: center;
     p {
-      font-size: 0.9rem;
+      font-size: 0.8rem;
     }
+  }
+  @media (min-width: 768px) and (max-width: 1350px) {
+    font-size: 0.9rem;
+    flex-wrap: wrap;
+    justify-content: center;
+    column-gap: 4rem;
   }
 `;
 
@@ -160,6 +168,7 @@ export const Icondiv = styled.div`
   @media (max-width: 480px) {
     img {
       height: 50px;
+      justify-content: center;
     }
   }
   @media (min-width: 481px) and (max-width: 767px) {
@@ -193,9 +202,4 @@ export const Inputdiv = styled.div`
       width: 50vw;
     }
   }
-
-  /* @media (min-width: 481px) and (max-width: 767px) {
-  }
-  @media (min-width: 768px) and (max-width: 1024px) {
-    }  */
 `;
