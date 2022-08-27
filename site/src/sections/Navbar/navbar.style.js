@@ -1,67 +1,61 @@
 import styled from "styled-components";
 
 export  const NavStyleWrapper = styled.nav`
-    
-    .nav{
-        position: sticky;
-    }
-    
+
     .navbar{
         display: flex;
         flex-direction: row;
         justify-content: space-between;
         align-items: center;
-        padding: 40px 184px;
-        gap: 100px;
-        padding-right: 70px;
-        position: relative;
+        padding: 2.4rem 11.04rem;
+        gap: 6rem;
+        padding-right: 4.2rem;
+        position: sticky;
         width: auto;
-        height: 110px;
-        // left: calc(50% - 1440px/2);
-        top: -18px;
+        height: 6.6rem;
+        left: calc(50% - 86.4rem/2);
+        margin: 0rem;
         background: #FFFFFF;
-        box-shadow: 0px 10px 25px rgba(0, 179, 159, 0.2);
+        box-shadow: 0rem0.6rem 1.5rem rgba(0, 179, 159, 0.2);
     }
     li{
-        width: 88px;
-        height: 44px;
+        width: 5.28rem;
+        height: 2.64rem;
         list-style: none;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 0.96rem;
+        line-height: 1.32rem;
         
         color: #3C494F;
 
     }
 
     .pattern{
-        // position: relative;
-        // top: 75px;
-        width: 165px;
+        width: 9.9rem;
     }
     button{
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        padding: 20px 32px;
+        padding: 1.2rem 1.92rem;
 
-        width: 149px;
-        height: 56px;
+        width: 8.94rem;
+        height: 3.36rem;
         background: #00B39F;
-        border-radius: 4px;
+        border-radius: 0.24rem;
     }
     .label{
-        width: 85px;
-        height: 40px;
+        width: 5.1rem;
+        height: 2.4rem;
 
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 700;
-        font-size: 16px;
-        line-height: 22px;
+        font-size: 0.96rem;
+        line-height: 1.32rem;
         color: #FFFFFF;
     }
 `;

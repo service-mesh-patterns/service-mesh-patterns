@@ -10,7 +10,7 @@ const Navbar = () => {
         <ul className="navbar">
           <img className="pattern" src={pattern} alt="pattern" />
           <li>Book Chapters</li>
-          <li>Patterns In-Action</li>
+          <li>Patterns In Action</li>
           <li>Meet the Authors</li>
           <li>About <img className="pattern" src={Layer5} alt="Layer5" /> </li>
           <button><span className="label">Get it Now</span></button>

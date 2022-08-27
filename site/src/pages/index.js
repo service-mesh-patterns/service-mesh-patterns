@@ -21,10 +21,10 @@ const IndexPage = () => {
     <>
       <SeoComponent title="Service Mesh Patterns" description="Service Mesh Patterns - Expect more from your infrastructure"
         schemaMarkup={schema} />
-      
+
       <Layout>
         <Navbar />
-        <SectionWrapper>  
+        <SectionWrapper>
           <div className="center under-construction">
             <img src={PatternsLogo} />
             <h1 className="center under-construction">Coming Soon...</h1>
