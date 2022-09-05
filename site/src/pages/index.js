@@ -5,7 +5,7 @@ import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
 import Footer from "../components/Footer/index";
-import About from "../sections/About/index";
+import About from "../sections/About";
 
 
 const IndexPage = () => {
@@ -27,8 +27,9 @@ const IndexPage = () => {
       <Layout>
         <SectionWrapper>
           <Hero />
-
+          <About />
           <div className="center under-construction">
+
             <img src={PatternsLogo} />
 
             <h1 className="center under-construction">Coming Soon...</h1>
@@ -44,7 +45,6 @@ const IndexPage = () => {
         <Hero />
         <AboutBook />
         <Footer /> */}
-        <About />
         </SectionWrapper>
       </Layout>
     </>

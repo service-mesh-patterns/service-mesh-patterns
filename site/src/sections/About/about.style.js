@@ -94,4 +94,4 @@ export  const AboutStyleWrapper = styled.section`
     li::before {content: "•"; color: #00B39F;
         display: inline-block; width: 1em;
         margin-left: -1em}; 
-`; 
+`;
