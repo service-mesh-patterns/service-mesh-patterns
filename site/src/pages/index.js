@@ -23,6 +23,7 @@ const IndexPage = () => {
         schemaMarkup={schema} />
       <Layout>
         <Navbar />
+        <Hero />
         <SectionWrapper>
           <div className="center under-construction">
             <img src={PatternsLogo} />

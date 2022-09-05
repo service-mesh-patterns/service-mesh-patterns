@@ -35,6 +35,13 @@ export  const NavStyleWrapper = styled.nav`
     .pattern{
         width: 9.9rem;
     }
+
+    .L5{
+        position: relative;
+        right: 14px;
+    
+    }
+
     button{
         display: flex;
         flex-direction: row;
