@@ -17,12 +17,12 @@ export const Wrapperdiv = styled.div`
   justify-content: center;
   height: 85%;
   gap: 7rem;
-  @media (max-width: 480px) {
+  @media (max-width: 550px) {
     flex-wrap: nowrap;
     flex-direction: column;
     gap: 1rem;
   }
-  @media (min-width: 481px) and (max-width: 767px) {
+  @media (min-width: 551px) and (max-width: 767px) {
     flex-wrap: nowrap;
     flex-direction: column;
     gap: 1rem;
@@ -43,8 +43,13 @@ export const Patternsdiv = styled.div`
   height: 100%;
   p {
     color: #cccccc;
+    font-style: italic;
+    font-weight: 200;
+    font-style: italic;
+    font-size: 1rem;
   }
   @media (max-width: 480px) {
+    padding-top: 3rem;
     flex-direction: column;
     width: 90%;
     text-align: center;
@@ -120,12 +125,12 @@ export const Copyrightdiv = styled.div`
   width: 65%;
   border-top: 2px solid white;
   justify-content: space-between;
+  padding-top: 0.4rem;
   p {
     color: rgb(204, 204, 204);
     font-size: 0.85rem;
   }
   @media (max-width: 480px) {
-    margin-top: 2rem;
     flex-direction: column;
     width: 88%;
     text-align: center;
@@ -166,8 +171,10 @@ export const Icondiv = styled.div`
     filter: grayscale(0) invert(0);
   }
   @media (max-width: 480px) {
+    position: absolute;
+    margin-top: -45rem;
     img {
-      height: 50px;
+      height: 60px;
       justify-content: center;
     }
   }

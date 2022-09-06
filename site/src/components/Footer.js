@@ -34,7 +34,7 @@ const Footer = () => {
           </p>
         </Patternsdiv>
         <Resourcesdiv>
-          <h3>Resources</h3>
+          <h3>RESOURCES</h3>
           <Resourceslink>
             <a href="https://layer5.io/learn/learning-paths">Learning Paths</a>
             <a href="https://layer5.io/resources">Resource library</a>
