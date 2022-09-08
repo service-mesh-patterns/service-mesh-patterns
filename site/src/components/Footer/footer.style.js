@@ -48,6 +48,9 @@ export const Patternsdiv = styled.div`
     font-style: italic;
     font-size: 1rem;
   }
+  img {
+    cursor: pointer;
+  }
   @media (max-width: 480px) {
     padding-top: 3rem;
     flex-direction: column;
@@ -92,13 +95,18 @@ export const Resourcesdiv = styled.div`
 `;
 
 export const Resourceslink = styled.div`
-  display: flex;
+  display: inline-flex;
   gap: 0.3rem;
   flex-direction: column;
   a {
     color: #cccccc;
     font-size: 1rem;
+    width: fit-content;
+    :hover {
+      color: #00b39f;
+    }
   }
+
   @media (min-width: 481px) and (max-width: 767px) {
     a {
       font-size: 1.1rem;

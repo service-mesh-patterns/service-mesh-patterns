@@ -21,16 +21,21 @@ import {
   Inputdiv,
 } from "./footer.style";
 
+//gatsby imports
+import { navigate } from "gatsby";
+
 const Footer = () => {
+  const homepageRoute = () => {
+    navigate("/");
+  };
   return (
     <Footerdiv>
       <Wrapperdiv>
         <Patternsdiv>
-          <img alt="Patterns Logo" src={PatternsLogo} />
+          <img alt="Patterns Logo" src={PatternsLogo} onClick={homepageRoute} />
           <p>
-            Layer5 helps organizations expect more from their infrastructure. We
-            are enablers of the engineer and embrace developer-defined
-            infrastructure.
+            Service mesh patterns help you get the most out of any service mesh.
+            Each pattern can be used as a template and is customizable.
           </p>
         </Patternsdiv>
         <Resourcesdiv>
@@ -56,7 +61,7 @@ const Footer = () => {
           <h3>
             Subcribe To Our <span>Mailling List</span>
           </h3>
-          <from
+          <form
             name="contactform"
             method="post"
             action="https://calcotestudios.us15.list-manage.com/subscribe/post?u=6b50be5aea3dfe1fd4c041d80&amp;id=6bb65defeb"
@@ -75,14 +80,14 @@ const Footer = () => {
                 required
               />
               <Button
+                secondary
+                title="Subscribe"
                 size="large"
                 variant="contained"
                 style={{ backgroundColor: "#00B39F" }}
-              >
-                Subscribe
-              </Button>
+              />
             </Inputdiv>
-          </from>
+          </form>
         </Maildiv>
       </Wrapperdiv>
       <Copyrightdiv>
