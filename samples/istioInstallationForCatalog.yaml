@@ -1,0 +1,15 @@
+#Pre-requisite: A Kubernetes cluster.
+#Description: This design installs the Istio service mesh version 1.12.0 control plane in the `istio-system` namespace with default profile.
+name: user
+services:
+  istioservicemesh:
+    type: IstioMesh
+    namespace: istio-system
+    version: 1.12.0
+    settings:
+      version: 1.12.0 #Version from here has been deprecated and will be removed soon after
+      profile: default
+    traits:
+      automaticSidecarInjection:
+        namespaces:
+          - default
