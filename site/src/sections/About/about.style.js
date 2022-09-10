@@ -11,7 +11,7 @@ export  const AboutStyleWrapper = styled.section`
     left: 0px;
     background: #FFFFFF;
     width: auto;
-    @media only screen and (max-width: 950px) {
+    @media only screen and (max-width: 950px){
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -20,8 +20,7 @@ export  const AboutStyleWrapper = styled.section`
         gap: 32px;
         z-index: 0.5;
         left: 0px;
-        font-size: 12px;
-        
+        font-size: 12px;   
     }
     .heading{
         color: #3C494F;
@@ -33,6 +32,12 @@ export  const AboutStyleWrapper = styled.section`
         line-height: 45px;
         justify-content: center;
         flex-grow: 0;
+        @media only screen and (max-width: 377px){
+            height: auto;
+        }
+        @media only screen and (max-width: 932px){
+            align-self: center;
+        }
     }
     .green{
         color: #00B39F;

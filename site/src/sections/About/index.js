@@ -10,13 +10,13 @@ const Mainabout = () => {
               A service mesh is a layer in your infrastructure that facilitates communication between services and so much more.
               Its value is enormous, and the value you derive from one is very much related to what role you play in the design,
               implementation, and operations of your cloud native applications and infrastructure.
-        </p> 
+        </p>
         <p className="Box">
               As your organization adopts microservices, you also need a service mesh, the infrastructure layer that handles interservice communication in microservice architectures. This seminal book provides patterns and operational best practices to help you deploy and use service meshes in a way that meets your company's goals and needs.
         </p>
         <p className="Box">
               Developers face a wide range of choices today: which service mesh to use, which features to deploy, and the best ways to exploit and deploy those features. Whether you're investigating service meshes or already use one, authors Lee Calcote and Nic Jackson provide universal patterns applicable to any service mesh: Istio, Linkerd, Consul, App Mesh, and more.
-        </p> 
+        </p>
       </section>
       <ul>
         <li>Get a vendor-neutral perspective on where each mesh shines (and perhaps, doesn't).</li>
