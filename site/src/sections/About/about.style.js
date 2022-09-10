@@ -38,7 +38,6 @@ export  const AboutStyleWrapper = styled.section`
         color: #00B39F;
     }
     .Box{
-        height: 81px;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
@@ -48,9 +47,7 @@ export  const AboutStyleWrapper = styled.section`
         color: #3C494F;
     }
     li{
-        width: 950px;
         justify-content: center;
-        height: 27px;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
@@ -71,7 +68,6 @@ export  const AboutStyleWrapper = styled.section`
         color: #3C494F;
     }
     .bbox{
-        height: 54px;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
