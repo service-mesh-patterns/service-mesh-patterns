@@ -94,10 +94,10 @@ const HeroStyleWrapper = styled.section`
         left: 58%;
         top: 10%;
         @media(max-width: 950px) {
-            width: 50%;
+            width: 40%;
         }
         @media(max-width: 750px) {
-            width: 80%;
+            width: 40%;
         }
     }
 
