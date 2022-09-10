@@ -8,7 +8,7 @@ const Mainabout = () => {
       <section>
         <p className="Box">
               A service mesh is a layer in your infrastructure that facilitates communication between services and so much more.
-              Its value is enormous, and the value you derive from one is very much related to what role you play in the design, 
+              Its value is enormous, and the value you derive from one is very much related to what role you play in the design,
               implementation, and operations of your cloud native applications and infrastructure.
         </p>
         <br /> <br />
