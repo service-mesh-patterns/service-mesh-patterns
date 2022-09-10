@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { Link } from "gatsby";
-// import Layer5 from "../../assets/images/brand/SVG/Layer5.svg";
+import Layer5 from "../../assets/images/brand/SVG/Layer5.svg";
 
 const NavItem = styled(Link)`
   text-decoration: none;
-  color: #3ab09e;
+  color: rgb(60, 73, 79);
   white-space: nowrap;
   margin: 0 1vw;
   transition: all 200ms ease-in;
@@ -20,13 +20,13 @@ const NavItem = styled(Link)`
     width: 0%;
     content: ".";
     color: transparent;
-    background: goldenrod;
+    background: rgb(0, 211, 169);
     height: 1px;
     transition: all 0.4s ease-in;
   }
 
   :hover {
-    color: goldenrod;
+    color: rgb(0, 211, 169);
     ::after {
       width: 100%;
     }
@@ -43,6 +43,22 @@ const NavItem = styled(Link)`
     height: 2.8rem;
     background: #00B39F;
     border-radius: 0.24rem;
+  }
+
+  .layer5{
+    position: relative;
+    top: 20px;
+    right: 55px;
+    @media (max-width: 991px) {
+      position: relative;
+      top: 20px;
+      right: 50px;
+    }
+    @media (max-width: 768px) {
+      position: relative;
+      top: 20px;
+      right: 75px;
+    }
   }
 
   .label{
@@ -69,7 +85,7 @@ const NavbarLinks = () => {
     <>
       <NavItem to="/">Book Chapters</NavItem>
       <NavItem to="/patterns">Patterns In Action</NavItem>
-      <NavItem to="/about">About Layer5 </NavItem>
+      <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
       <NavItem to="/get"><button><span className="label">Get it Now</span></button></NavItem>
     </>
   );
