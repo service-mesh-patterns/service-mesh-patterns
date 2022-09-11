@@ -43,19 +43,19 @@ const Author= () => {
         </div>
         <div className="aboutNic">
           <div className="nic-paragraph">
-            <p className="hashi-corp-logo"> Developer Adovocate, <img src={Harshicorp} /> </p>
+            <p className="hashi-corp-logo"> Developer Adovocate,</p>
+            <img className= "harshi-logo" src={Harshicorp} />
             <p className="nic">Nic Jackson is a developer advocate at HashiCorp, and the author of “Building Microservices in Go”, a book which examines the best patterns and practices for building microservices with the Go. Nic is also a coauthor of the Service Mesh Patterns book.
             </p>
-            <div className="socials">
-              <img className="author-github" src={Github} alt="Github" />
-              <img className="author-twitter" src={Twitter} alt="Twitter" />
-              <img className="author-github" src={LinkedIn} alt="Linkedin" />
+            <div className="socials-nic">
+              <img className="author-github-nic" src={Github} alt="Github" />
+              <img className="author-twitter-nic" src={Twitter} alt="Twitter" />
+              <img className="author-github-nic" src={LinkedIn} alt="Linkedin" />
             </div>
-
-            <div className="aboutLee-1">
-              <img className="nicphoto" src={NicPhoto} alt="Lee" />
-              <p className="descriptionnic"> Nic Jackson </p>
-            </div>
+          </div>
+          <div className="aboutNic-1">
+            <img className="nicphoto" src={NicPhoto} alt="Lee" />
+            <p className="descriptionnic"> Nic Jackson </p>
           </div>
         </div>
       </div>
