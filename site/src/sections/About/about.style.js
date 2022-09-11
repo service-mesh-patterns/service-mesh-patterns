@@ -52,13 +52,13 @@ export  const AboutStyleWrapper = styled.section`
         color: #3C494F;
     }
     li{
-        justify-content: center;
+        position: relative;
+        right: 30px;
         font-family: 'Open Sans';
         font-style: normal;
         font-weight: 400;
-        font-size: 19px;
+        font-size: 21px;
         line-height: 27px;
-        text-align: justify;
         color: #3C494F;
     }
     .subhead{
