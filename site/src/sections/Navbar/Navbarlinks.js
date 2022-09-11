@@ -11,6 +11,8 @@ const NavItem = styled(Link)`
   transition: all 200ms ease-in;
   position: relative;
   gap: 6rem;
+  position: relative;
+  bottom: 5px;
   
   :after {
     position: absolute;
@@ -38,11 +40,12 @@ const NavItem = styled(Link)`
     justify-content: center;
     align-items: center;
     padding: 1.2rem 1.92rem;
-
     width: 8.94rem;
     height: 2.8rem;
     background: #00B39F;
     border-radius: 0.24rem;
+    position: relative;
+    top: 8px;
   }
 
   .layer5{
@@ -80,6 +83,7 @@ const NavItem = styled(Link)`
     z-index: 6;
   }
 `;
+
 const NavbarLinks = () => {
   return (
     <>

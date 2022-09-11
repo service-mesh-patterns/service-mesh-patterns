@@ -4,18 +4,18 @@ import NavbarLinks from "./Navbarlinks";
 import Logo from "./Logos";
 
 const Navigation = styled.nav`
+  position: sticky;
+  top: 0px;
   height: 110px;
   display: flex;
   background-color: #fff;
-  position: relative;
   justify-content: space-between;
   border-bottom: 2px solid #33333320;
   margin: 0 auto;
   padding: 0 5vw;
   z-index: 2;
   align-self: center;
-  position: sticky;
-  
+
   @media (max-width: 768px) {
     height: 110px;
     top: 0;
