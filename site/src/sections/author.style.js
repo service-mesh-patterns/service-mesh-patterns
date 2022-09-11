@@ -3,7 +3,7 @@ import styled from "styled-components";
 
 const AuthorStyleWrapper = styled.div`
     
-    background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%)
+    background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%);
 
     postion: fixed;
     
@@ -171,7 +171,45 @@ const AuthorStyleWrapper = styled.div`
     .socials-nic{
         margin-left: -18%;
     }
+  
+   .technical-review-heading{
+    left: 0px;
+    top: 0px;
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 47px;
+    line-height: 64px;
+   text-align: center;
+   color: #FFFFFF;
+   }
+   .technical-review-profiles{
+    display:flex;
+    margin-bottom: 40px;
+   }
+   .technical-review-para{
+    font-family: 'Open Sans';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 38px;
+    text-align: justify;
+    color: #FFFFFF;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    margin-left: 2%;
+    margin-top: 10px;
+   }
+   .socials-matt{
+    margin-left: 30px;
+    margin-top: 10px;
+   }
+   .Reviewer-1{
+    margin-left: 40%;
+   }
    
+ 
  
     
  

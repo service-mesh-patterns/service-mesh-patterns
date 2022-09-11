@@ -10,6 +10,7 @@ import Twitter from "../assets/images/author/twitter.svg";
 import LinkedIn from "../assets/images/author/linkedin.svg";
 import Layer5 from "../assets/images/author/layer5.svg";
 import Harshicorp from "../assets/images/author/Harshicorp.svg";
+import Reviewer from "../assets/images/author/Reviewer.jpg";
 
 // styles import
 import AuthorStyleWrapper from "../sections/author.style";
@@ -18,6 +19,7 @@ import AuthorStyleWrapper from "../sections/author.style";
 
 // ui import
 import { StaticImage } from "gatsby-plugin-image";
+
 
 const Author= () => {
   return (
@@ -56,6 +58,20 @@ const Author= () => {
           <div className="aboutNic-1">
             <img className="nicphoto" src={NicPhoto} alt="Lee" />
             <p className="descriptionnic"> Nic Jackson </p>
+          </div>
+        </div>
+        <div className="technical-review">
+          <p className="technical-review-heading">with Technical Review by</p>
+        </div>
+        <div className="technical-review-profile-section">
+          <div className="technical-review-profiles">
+            <img className="Reviewer-1" src={Reviewer} />
+            <p className="technical-review-para">Matt Young</p>
+            <div className="socials-matt">
+              <img className="author-github-matt" src={Github} alt="Github" />
+              <img className="author-twitter-matt" src={Twitter} alt="Twitter" />
+              <img className="author-github-matt" src={LinkedIn} alt="Linkedin" />
+            </div>
           </div>
         </div>
       </div>
