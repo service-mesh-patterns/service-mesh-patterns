@@ -112,6 +112,9 @@ export const Resourceslink = styled.div`
     a {
       font-size: 1.1rem;
     }
+    @media (min-width: 480px) {
+      align-items: center;
+    }
   }
 `;
 
@@ -171,6 +174,7 @@ export const Icondiv = styled.div`
     padding: 0.1rem;
     height: 30px;
     width: 32px;
+    cursor: pointer;
     filter: grayscale(1) invert(0.25);
     :hover {
       filter: grayscale(0) invert(0);
@@ -179,6 +183,7 @@ export const Icondiv = styled.div`
   a {
     width: fit-content;
     padding-right: 15px;
+    cursor: default;
   }
   @media (max-width: 480px) {
     position: absolute;
