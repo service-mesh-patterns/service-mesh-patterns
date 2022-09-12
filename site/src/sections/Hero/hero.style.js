@@ -1,13 +1,12 @@
 import styled from "styled-components";
 
-const HeroStyleWrapper = styled.div`
+const HeroStyleWrapper = styled.section`
     height: 53rem;
     width: 100%;
     background-color: #00B39F;
     color: #FFF;
     display: flex;
-    postion: relative;
-    overflow: hidden;
+    position: relative;
     
     .content {
         position: absolute;
@@ -53,6 +52,14 @@ const HeroStyleWrapper = styled.div`
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        .junction {
+            margin: 0 1rem;
+        }
+
+        .by-junction {
+            margin-right: 1rem;
+        }
     }
     
     .author {
@@ -60,8 +67,6 @@ const HeroStyleWrapper = styled.div`
         justify-content: flex-start;
         align-items: center;
         gap: .75em;
-        width: 25%;
-        margin-left: 1rem;
 
         @media(max-width: 500px) {
             width: auto;
