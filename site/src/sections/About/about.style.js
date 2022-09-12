@@ -92,4 +92,26 @@ export  const AboutStyleWrapper = styled.section`
     li::before {content: "•"; color: #00B39F;
         display: inline-block; width: 1em;
         margin-left: -1em}; 
+
+    .openv{
+        position: relative;
+        top: 10px;
+        right: 30px;
+    }
+
+    .closev{
+        position: relative;
+        bottom: 10px;
+        left: 980px;
+        // @media only screen and (max-width: 932px){
+        //     position: relative;
+        //     bottom: 10px;
+        //     left: 810px;
+        // }
+        // @media only screen and (max-width: 1120px){
+        //     position: relative;
+        //     bottom: 10px;
+        //     left: 745px;
+        // }
+    }
 `;

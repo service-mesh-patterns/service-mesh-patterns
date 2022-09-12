@@ -1,5 +1,7 @@
 import React from "react";
 import { AboutStyleWrapper } from "./about.style";
+import Openvector from '../../assets/images/about/Vector.png';
+import Closevector from "../../assets/images/about/vector.png";
 
 const Mainabout = () => {
   return (
@@ -32,9 +34,11 @@ const Mainabout = () => {
       </p>
       <h2 className="subhead">Who is this book for?</h2>
       <section className="margin">
+        <img src={Openvector} alt="Open Vector" className="openv"/>
         <p className="bbox">Identifying who this book is for has been one of the hardest challenges in writing it. The power of a service mesh is vast, and therefore, empowers individuals of many different roles.</p>
         <br />
         <p className="bbox">In short, this book is for anyone delivering workloads enabled by a service mesh and who wants to ensure their use of a service mesh provides the most possible value to the workloads and teams that rely on it.</p>
+        <img src={Closevector} alt="Close Vector" className="closev"/>
       </section>
     </AboutStyleWrapper>
 
