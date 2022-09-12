@@ -7,7 +7,7 @@ export const Footerdiv = styled.footer`
   height: auto;
   background-color: black;
   align-items: center;
-  padding-top: 3rem;
+  padding-top: 3.5rem;
   gap: 2.5rem;
 `;
 
@@ -52,7 +52,7 @@ export const Patternsdiv = styled.div`
     cursor: pointer;
   }
   @media (max-width: 480px) {
-    padding-top: 3rem;
+    margin-top: 3rem;
     flex-direction: column;
     width: 90%;
     text-align: center;
@@ -64,7 +64,7 @@ export const Patternsdiv = styled.div`
     flex-direction: column;
     width: 90%;
     text-align: center;
-    padding-top: 1.5rem;
+    margin-top: 1.5rem;
     p {
       font-size: 1.2rem;
     }
@@ -112,9 +112,9 @@ export const Resourceslink = styled.div`
     a {
       font-size: 1.1rem;
     }
-    @media (min-width: 480px) {
-      align-items: center;
-    }
+  }
+  @media (max-width: 480px) {
+    align-items: center;
   }
 `;
 
@@ -148,6 +148,7 @@ export const Copyrightdiv = styled.div`
     text-align: center;
     p {
       font-size: 0.75rem;
+      margin-bottom: 0;
     }
   }
   @media (min-width: 481px) and (max-width: 767px) {
@@ -164,6 +165,7 @@ export const Copyrightdiv = styled.div`
     flex-wrap: wrap;
     justify-content: center;
     column-gap: 4rem;
+    margin-bottom: 2rem;
   }
 `;
 
@@ -182,19 +184,25 @@ export const Icondiv = styled.div`
   }
   a {
     width: fit-content;
-    padding-right: 15px;
+    height: 30px;
+    margin-right: 1rem;
     cursor: default;
   }
-  @media (max-width: 480px) {
-    position: absolute;
-    margin-top: -45rem;
+  @media (max-width: 767px) {
+    position: relative;
+    bottom: 50rem;
     img {
-      height: 60px;
       justify-content: center;
     }
+    a {
+      margin: auto;
+    }
   }
-  @media (min-width: 481px) and (max-width: 767px) {
-    justify-content: center;
+  @media (max-width: 642px) {
+    bottom: 52rem;
+  }
+  @media (max-width: 480px) {
+    bottom: 46rem;
   }
 `;
 
