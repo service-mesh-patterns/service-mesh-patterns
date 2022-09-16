@@ -21,7 +21,6 @@ const Navigation = styled.nav`
     top: 0;
     left: 0;
     right: 0;
-    left: 0;
   }
 `;
 
@@ -50,7 +49,7 @@ const Navbox = styled.div`
     padding-top: 10vh;
     background-color: #fff;
     transition: all 0.3s ease-in;
-    top: 16vh;
+    top: 12vh;
     left: ${props => (props.open ? "-100%" : "0")};
   }
 `;

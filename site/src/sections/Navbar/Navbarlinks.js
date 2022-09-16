@@ -47,6 +47,9 @@ const NavItem = styled(Link)`
     position: relative;
     top: 8px;
   }
+  button:hover{
+    cursor: pointer;
+  }
 
   .layer5{
     position: relative;
