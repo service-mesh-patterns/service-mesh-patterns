@@ -91,6 +91,12 @@ export const LogoWrap = styled.div`
   @media (max-width: 768px) and (orientation: landscape) {
     flex: 0 1 160px;
   }
+  @media (max-width: 980px) {
+    width: 90%;
+  }
+  @media (max-width: 965px) {
+    min-width: 15%;
+  }
 `;
 
 export const NavItem = styled(Link)`

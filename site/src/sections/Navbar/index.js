@@ -23,6 +23,7 @@ const Navbar1 = () => {
         <Navbox>
           <NavItem to="/">Book Chapters</NavItem>
           <NavItem to="/">Meet the Authors</NavItem>
+          <NavItem to="/">Patterns in action</NavItem>
           <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
           <NavItem to="/get"><button><span className="label">Get it Now</span></button></NavItem>
         </Navbox>
@@ -30,6 +31,7 @@ const Navbar1 = () => {
         <Navbox open>
           <NavItem to="/">Book Chapters</NavItem>
           <NavItem to="/">Meet the Authors</NavItem>
+          <NavItem to="/">Patterns in action</NavItem>
           <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
           <NavItem to="/get"><button><span className="label">Get it Now</span></button></NavItem>
         </Navbox>
