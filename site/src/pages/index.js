@@ -44,7 +44,7 @@ const IndexPage = () => {
           {/* <Navbar />
         <Hero />
         <AboutBook />
-        <Footer /> */}
+        <Footer />  */}
         </SectionWrapper>
       </Layout>
     </>

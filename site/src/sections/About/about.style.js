@@ -96,22 +96,39 @@ export  const AboutStyleWrapper = styled.section`
     .openv{
         position: relative;
         top: 10px;
-        right: 30px;
+        right: 10px;
+        width: 24.75px;
+        height: 19.37px;
     }
 
     .closev{
         position: relative;
-        bottom: 10px;
-        left: 980px;
-        // @media only screen and (max-width: 932px){
-        //     position: relative;
-        //     bottom: 10px;
-        //     left: 810px;
-        // }
-        // @media only screen and (max-width: 1120px){
-        //     position: relative;
-        //     bottom: 10px;
-        //     left: 745px;
-        // }
+        top: 231.41px;
+        width: 24.83px;
+        height: 19.59px;
+        @media only screen and (max-width: 673px){
+            top: 237px;
+        }
+        @media only screen and (max-width: 602px){
+            top: 288px;
+        }
+        @media only screen and (max-width: 536px){
+            top: 325px;
+        }
+        @media only screen and (max-width: 484px){
+            top: 349px;
+        }
+        @media only screen and (max-width: 450px){
+            top: 416px;
+        }
+        @media only screen and (max-width: 375px){
+        top: 460px;
+        }
+    }
+
+    .container{
+        display: flex;
+        flex-direction: row;
+        margin: 10px auto;
     }
 `;
