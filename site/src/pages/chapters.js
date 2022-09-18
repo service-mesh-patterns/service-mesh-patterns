@@ -10,7 +10,7 @@ const Chapters = () => {
     <>
       <SeoComponent
         title="Service Mesh Patterns - Chapters and Topics"
-        description="Topics found in the Service Mesh Patterns book by chapter"
+        description="Topics in the Service Mesh Patterns book by chapter"
       />
       <Layout>
         <Navbar />
