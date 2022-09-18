@@ -126,7 +126,7 @@ export  const AboutStyleWrapper = styled.section`
         }
     }
 
-    .container{
+    .flexrow{
         display: flex;
         flex-direction: row;
         margin: 10px auto;
