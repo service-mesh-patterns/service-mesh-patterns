@@ -29,7 +29,6 @@ const IndexPage = () => {
           <Hero />
           <About />
           <div className="center under-construction">
-
             <img src={PatternsLogo} />
 
             <h1 className="center under-construction">Coming Soon...</h1>
@@ -44,7 +43,7 @@ const IndexPage = () => {
           {/* <Navbar />
         <Hero />
         <AboutBook />
-        <Footer />  */}
+        <Footer /> */}
         </SectionWrapper>
       </Layout>
     </>
