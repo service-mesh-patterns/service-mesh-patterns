@@ -28,18 +28,8 @@ const IndexPage = () => {
         <SectionWrapper>
           <Hero />
           <About />
-          <div className="center under-construction">
-            <img src={PatternsLogo} />
-
-            <h1 className="center under-construction">Coming Soon...</h1>
-            <h3 className="under-construction">
-              See{" "}
-              <a href="https://layer5.io/books/service-mesh-patterns">
-                Service Mesh Patterns Book
-              </a>
-            </h3>
-          </div>
           <Footer />
+          
           {/* <Navbar />
         <Hero />
         <AboutBook />

@@ -5,23 +5,12 @@ export  const AboutStyleWrapper = styled.section`
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 40px 184px;
     gap: 32px;
     position: relative;
     left: 0px;
     background: #FFFFFF;
     width: auto;
-    @media only screen and (max-width: 950px){
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: flex-start;
-        padding: 0px 20px;
-        gap: 32px;
-        z-index: 0.5;
-        left: 0px;
-        font-size: 12px;   
-    }
+
     .heading{
         color: #3C494F;
         height: 45px;
@@ -62,7 +51,6 @@ export  const AboutStyleWrapper = styled.section`
         color: #3C494F;
     }
     .subhead{
-        width: 1072px;
         height: 35px;
         align-self: stretch;
         font-family: 'Qanelas Soft';
@@ -96,14 +84,14 @@ export  const AboutStyleWrapper = styled.section`
     .openv{
         position: relative;
         top: 10px;
-        right: 10px;
+        right: 5px;
         width: 24.75px;
         height: 19.37px;
     }
 
     .closev{
         position: relative;
-        top: 231.41px;
+        top: 170px;
         width: 24.83px;
         height: 19.59px;
         @media only screen and (max-width: 673px){
