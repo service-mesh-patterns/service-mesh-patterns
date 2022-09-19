@@ -18,14 +18,18 @@ export  const AboutStyleWrapper = styled.section`
         font-weight: 700;
         font-size: 36px;
         line-height: 45px;
-        justify-content: center;
+        align-self: stretch;
         flex-grow: 0;
         @media only screen and (max-width: 377px){
             height: auto;
         }
         @media only screen and (max-width: 932px){
-            align-self: center;
+            // align-self: center;
         }
+    }
+    @media(max-width: 950px) {
+        position: relative;
+        top: 40%;
     }
     .green{
         color: #00B39F;

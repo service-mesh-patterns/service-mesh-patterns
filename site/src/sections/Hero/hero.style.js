@@ -90,17 +90,15 @@ const HeroStyleWrapper = styled.section`
     }
 
     .cover{
-        width: 40%;
-        position: relative;
-        bottom: 30px;
-        // left: 58%;
-        // top: 9%;
+        width: 45%;
+        left: 58%;
+        top: 10%;
         z-index: 2;
         @media(max-width: 950px) {
-            width: 35%;
+            width: 40%;
         }
         @media(max-width: 750px) {
-            width: 35%;
+            width: 60%;
         }
     }
 
