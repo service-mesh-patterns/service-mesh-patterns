@@ -91,8 +91,10 @@ const HeroStyleWrapper = styled.section`
 
     .cover{
         width: 40%;
-        left: 58%;
-        top: 9%;
+        position: relative;
+        bottom: 30px;
+        // left: 58%;
+        // top: 9%;
         z-index: 2;
         @media(max-width: 950px) {
             width: 35%;

@@ -23,11 +23,11 @@ const IndexPage = () => {
         schemaMarkup={schema}
       />
       <Layout>
-        
-          <Hero />
-          <About />
-          <Footer />
-          
+
+        <Hero />
+        <About />
+        <Footer />
+
       </Layout>
     </>
   );
