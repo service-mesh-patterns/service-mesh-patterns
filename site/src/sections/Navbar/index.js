@@ -3,7 +3,7 @@ import pattern from "../../assets/images/brand/SVG/service-mesh-patterns-side.sv
 import { Link } from "gatsby";
 import Layer5 from "../../assets/images/brand/SVG/Layer5.svg";
 import { Navigation, Toggle , Navbox , Hamburger , LogoWrap , NavItem } from "./navbar.style";
-
+import Button from "../../components/Button";
 
 const Navbar1 = () => {
   const [navbarOpen, setNavbarOpen] = useState(false);
@@ -25,7 +25,7 @@ const Navbar1 = () => {
           <NavItem to="/">Meet the Authors</NavItem>
           <NavItem to="/">Patterns in action</NavItem>
           <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
-          <NavItem to="/get"><button><span className="label">Get it Now</span></button></NavItem>
+          <NavItem to="/get"><Button><span className="label">Get it Now</span></Button></NavItem>
         </Navbox>
       ) : (
         <Navbox open>
@@ -33,7 +33,7 @@ const Navbar1 = () => {
           <NavItem to="/">Meet the Authors</NavItem>
           <NavItem to="/">Patterns in action</NavItem>
           <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
-          <NavItem to="/get"><button><span className="label">Get it Now</span></button></NavItem>
+          <NavItem to="/get"><Button><span className="label">Get it Now</span></Button></NavItem>
         </Navbox>
       )}
     </Navigation>

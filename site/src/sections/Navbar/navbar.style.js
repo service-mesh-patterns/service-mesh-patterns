@@ -136,12 +136,14 @@ export const NavItem = styled(Link)`
     justify-content: center;
     align-items: center;
     padding: 1.2rem 1.92rem;
-    width: 8.94rem;
     height: 2.8rem;
     background: #00B39F;
     border-radius: 0.24rem;
     position: relative;
     top: 8px;
+    @media (max-width: 924px){
+      width: 80%;
+    }
   }
   button:hover{
     cursor: pointer;
@@ -149,17 +151,18 @@ export const NavItem = styled(Link)`
 
   .layer5{
     position: relative;
-    top: 20px;
-    right: 55px;
+    top: 25px;
+    right: 65px;
+    min-width: 140%;
     @media (max-width: 991px) {
       position: relative;
       top: 20px;
-      right: 50px;
+      right: 60px;
     }
     @media (max-width: 768px) {
       position: relative;
       top: 20px;
-      right: 75px;
+      right: 90px;
     }
   }
 
