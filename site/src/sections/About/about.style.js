@@ -10,7 +10,6 @@ export  const AboutStyleWrapper = styled.section`
     left: 0px;
     background: #FFFFFF;
     width: auto;
-
     .heading{
         color: #3C494F;
         height: 45px;

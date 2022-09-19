@@ -92,12 +92,13 @@ const HeroStyleWrapper = styled.section`
     .cover{
         width: 40%;
         left: 58%;
-        top: 10%;
+        top: 9%;
+        z-index: 2;
         @media(max-width: 950px) {
-            width: 40%;
+            width: 35%;
         }
         @media(max-width: 750px) {
-            width: 40%;
+            width: 35%;
         }
     }
 

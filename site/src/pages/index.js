@@ -2,8 +2,6 @@ import * as React from "react";
 import Layout from "../components/layout";
 import SeoComponent from "../components/seo";
 import Hero from "../sections/Hero";
-import SectionWrapper from "./index.style";
-import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
 import Footer from "../components/Footer/index";
 import About from "../sections/About";
 
@@ -25,16 +23,11 @@ const IndexPage = () => {
         schemaMarkup={schema}
       />
       <Layout>
-        <SectionWrapper>
+        
           <Hero />
           <About />
           <Footer />
           
-          {/* <Navbar />
-        <Hero />
-        <AboutBook />
-        <Footer /> */}
-        </SectionWrapper>
       </Layout>
     </>
   );
