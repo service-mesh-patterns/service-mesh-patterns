@@ -25,7 +25,7 @@ const Navbar1 = () => {
           <NavItem to="/">Meet the Authors</NavItem>
           <NavItem to="/">Patterns in action</NavItem>
           <NavItem to="/about">About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
-          <NavItem to="/get"><Button><span className="label">Get it Now</span></Button></NavItem>
+          <NavItem to="/get"><Button Title="Get it Now" /></NavItem>
         </Navbox>
       ) : (
         <Navbox open>
