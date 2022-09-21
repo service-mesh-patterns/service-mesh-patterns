@@ -21,23 +21,19 @@ const AuthorStyleWrapper = styled.div`
 
     }
     .author-title{
-        font-family: 'open-sans';
-        font-size: 50px;
-        font-weight: 700;
-        line-height: 71px;
-        letter-spacing: 0em;
         text-align: center;
         color: #ffffff;
-        width: 1072px;
-        font-style: normal;
-        font-weight: 700;
-        margin-left: 18%;
-
     }
     .aboutLee{
         display: flex;
         margin-left: 20%;
         margin-top: 40px;
+        @media(max-width:900px){
+            flex-direction: column;
+            margin-left: 5%;
+            padding-top: 180px;
+            width: 100%;
+        }
     }
     
     .LeePhoto{
@@ -46,10 +42,17 @@ const AuthorStyleWrapper = styled.div`
         top: 0px;
         border-radius: 200px;
         margin-top: 20px;
+        @media(max-width: 900px){
+            margin-left: 15%;
+            width: 260px;
+            left: 0px;
+            margin-top: 60px;
+            border-radius: 200px;
+            position: absolute;
+        }
     }
 
     .descriptionlee{
-        font-family: Open Sans;
         font-size: 36px;
         font-weight: 600;
         line-height: 49px;
@@ -57,11 +60,14 @@ const AuthorStyleWrapper = styled.div`
         text-align: center;
         color: #ffffff;
         margin-top: 10px;
-
+    @media(max-width:900px){
+        text-align:left;
+        margin-left: 10%;
+        width: 100%;
+        margin-top: 70px;
     }
-
+    }
     .layer5-logo{
-        font-family: Open Sans;
         font-size: 28px;
         font-weight: 700;
         line-height: 38px;
@@ -70,9 +76,7 @@ const AuthorStyleWrapper = styled.div`
         color: #fff;
         margin-left: 10%;
     }
-
     .lee{
-        font-family: Open Sans;
         font-size: 20px;
         line-height: 27px;
         letter-spacing: 0em;
@@ -80,6 +84,9 @@ const AuthorStyleWrapper = styled.div`
         color: #FFFFFF;
         width: 55%;
         margin-left: 10%;
+        @media(max-width: 900px){
+            width: 80%;
+        }
     }
     .socials{
         margin-left: 9%;
@@ -94,11 +101,14 @@ const AuthorStyleWrapper = styled.div`
         display: flex;
         margin-left: 30%;
         margin-top: 40px;
-        
-        
+        @media(max-width:900px){
+            flex-direction: column;
+            margin-left: 30%;
+            padding-top: 290px;
+            width: 90%;
+        }
     }
     .hashi-corp-logo{
-        font-family: Open Sans;
         font-size: 28px;
         font-weight: 700;
         line-height: 38px;
@@ -106,21 +116,26 @@ const AuthorStyleWrapper = styled.div`
         text-align: justified;
         color: #fff;
         position: absolute;
-        margin-left: -10%;
-    }
+        margin-left: -15%;
+        @media(max-width: 900px)
+        {
+        margin-left: -18%;
+        }
+        }
     .harshi-logo{
-        margin-left: 80px;
-        @media(max-width: 1550px) {
-            margin-left: 120px;
+        margin-left: 105px;
+        @media(max-width: 1595px) {
+            margin-left: 140px;
         }
         @media(max-width: 1450px) {
             margin-left: 160px;
         }
-     
+        @media(max-width: 900px){
+            margin-left: 150px;
+        }
      
     }
     .nic{
-        font-family: Open Sans;
         font-size: 20px;
         line-height: 27px;
         letter-spacing: 0em;
@@ -129,6 +144,9 @@ const AuthorStyleWrapper = styled.div`
         width: 53%;
         margin-top: 10px;
         margin-left: -18%;
+        @media(max-width: 900px){
+            width: 80%;
+        }
     }
     .nicphoto{
         width: 460px;
@@ -146,9 +164,16 @@ const AuthorStyleWrapper = styled.div`
         @media(max-width: 1196px) {
             margin-left: -190%;
         }
+        @media(max-width: 900px){
+            margin-left: -15%;
+            width: 260px;
+            left: 0px;
+            top: 0px;
+            border-radius: 200px;
+            position: absolute;
+        }
     }
     .descriptionnic{
-        font-family: Open Sans;
         font-size: 36px;
         font-weight: 600;
         line-height: 49px;
@@ -166,24 +191,27 @@ const AuthorStyleWrapper = styled.div`
         @media(max-width: 1190px) {
             margin-left: -380%;
         }
-     
     }
     .socials-nic{
         margin-left: -18%;
     }
-  
+    .author-twitter-nic{
+        margin-left: 6px;
+    }
+    .author-github-nic{
+        margin-left: 6px;
+    }
    .technical-review-heading{
     left: 0px;
     top: 0px;
-    font-family: 'Open Sans';
     font-style: normal;
     font-weight: 700;
     font-size: 47px;
     line-height: 64px;
-   text-align: center;
-   color: #FFFFFF;
+    text-align: center;
+    color: #FFFFFF;
    }
-   .technical-review-profiles{
+  .technical-review-profiles{
     display:flex;
     margin-bottom: 40px;
    }
@@ -205,16 +233,16 @@ const AuthorStyleWrapper = styled.div`
     margin-left: 30px;
     margin-top: 10px;
    }
+   .author-twitter-matt{
+    margin-left: 6px;
+    }
+   .author-github-matt{
+    margin-left: 6px;
+    }
    .Reviewer-1{
     margin-left: 40%;
    }
-   
  
- 
-    
- 
-  
-
 `;
 
 export default AuthorStyleWrapper;

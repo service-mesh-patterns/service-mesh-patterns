@@ -13,7 +13,7 @@ import Harshicorp from "../assets/images/author/Harshicorp.svg";
 import Reviewer from "../assets/images/author/Reviewer.jpg";
 
 // styles import
-import AuthorStyleWrapper from "../sections/author.style";
+import AuthorStyleWrapper from "./author.style";
 
 
 
@@ -25,12 +25,12 @@ const Author= () => {
   return (
     <AuthorStyleWrapper>
       <StaticImage className="background-image" src={Background} alt="background" />
-      <div className="author-content">
+      <section className="author-content">
         <h1 className="author-title">Meet our Authors</h1>
         <div className="aboutLee">
           <div className="aboutLee-1">
             <img className="LeePhoto" src={LeePhoto} alt="Lee" />
-            <p className="descriptionlee"> Lee Calcote </p>
+            <p className="descriptionlee"> Lee Calcote</p>
           </div>
           <div className="lee-paragraph">
             <p className="layer5-logo"> Founder and CEO, <img src={Layer5} /> </p>
@@ -43,7 +43,7 @@ const Author= () => {
             </div>
           </div>
         </div>
-        <div className="aboutNic">
+        <section className="aboutNic">
           <div className="nic-paragraph">
             <p className="hashi-corp-logo"> Developer Adovocate,</p>
             <img className= "harshi-logo" src={Harshicorp} />
@@ -59,11 +59,11 @@ const Author= () => {
             <img className="nicphoto" src={NicPhoto} alt="Lee" />
             <p className="descriptionnic"> Nic Jackson </p>
           </div>
-        </div>
-        <div className="technical-review">
+        </section>
+        <section className="technical-review">
           <p className="technical-review-heading">with Technical Review by</p>
-        </div>
-        <div className="technical-review-profile-section">
+        </section>
+        <section className="technical-review-profile-section">
           <div className="technical-review-profiles">
             <img className="Reviewer-1" src={Reviewer} />
             <p className="technical-review-para">Matt Young</p>
@@ -73,8 +73,8 @@ const Author= () => {
               <img className="author-github-matt" src={LinkedIn} alt="Linkedin" />
             </div>
           </div>
-        </div>
-      </div>
+        </section>
+      </section>
     </AuthorStyleWrapper>
   );
 };
