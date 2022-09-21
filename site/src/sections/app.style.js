@@ -28,7 +28,7 @@ html{
 
 body,html {
     margin: 0;
-    background-color: ${(props) => props.theme.primaryColor};
+    background-color: "#FFFFFF";
 }
 
 body {
