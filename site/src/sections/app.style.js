@@ -28,7 +28,7 @@ html{
 
 body,html {
     margin: 0;
-    background-color: "#FFFFFF";
+    background-color: #FFFFFF;
 }
 
 body {
