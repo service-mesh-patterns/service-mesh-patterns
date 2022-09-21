@@ -1,7 +1,7 @@
 import React from "react";
 
 // assets import
-import cover from "../../assets/images/hero/cover.svg";
+import cover from "../../assets/images/hero/cover.png";
 import graphic from "../../assets/images/hero/graphic.svg";
 const LeePhoto = "../../assets/images/lee_calcote.png";
 const NicPhoto = "../../assets/images/nic_jackson.png";
