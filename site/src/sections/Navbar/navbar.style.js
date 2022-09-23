@@ -14,7 +14,7 @@ export  const Navigation = styled.nav`
     z-index: 2;
     align-self: center;
 
-    @media (max-width: 768px) {
+    @media (max-width: 912px) {
         height: 110px;
         top: 0;
         left: 0;
@@ -28,7 +28,7 @@ export const Toggle = styled.div`
   cursor: pointer;
   padding: 0 10vw;
 
-  @media (max-width: 768px) {
+  @media (max-width: 912px) {
     display: flex;
   }
 `;
@@ -39,7 +39,7 @@ export const Navbox = styled.div`
   justify-content: flex-end;
   align-items: center;
 
-  @media (max-width: 768px) {
+  @media (max-width: 912px) {
     flex-direction: column;
     position: fixed;
     width: 100%;
@@ -88,7 +88,7 @@ export const LogoWrap = styled.div`
   margin: auto 0;
   flex: 0 1 160px;
   margin-left: 70px;
-  @media (max-width: 768px) and (orientation: landscape) {
+  @media (max-width: 912px) and (orientation: landscape) {
     flex: 0 1 160px;
   }
   @media (max-width: 980px) {
@@ -159,27 +159,14 @@ export const NavItem = styled(Link)`
       top: 20px;
       right: 60px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: 912px) {
       position: relative;
       top: 20px;
       right: 90px;
     }
   }
 
-  .label{
-    width: 5.1rem;
-    height: 2.4rem;
-    font-family: 'Open Sans';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 0.96rem;
-    line-height: 1.32rem;
-    color: #FFFFFF;
-    position: relative;
-    top: 10px;
-  }
-
-  @media (max-width: 768px) {
+  @media (max-width: 912px) {
     padding: 20px 0;
     font-size: 1.5rem;
     z-index: 6;
