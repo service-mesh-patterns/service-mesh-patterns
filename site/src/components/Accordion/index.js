@@ -10,7 +10,10 @@ const Accordion = ({ area, name, topics }) => {
       <div className="accordion-title" onClick={() => setOpen(prevState => !prevState)}>
         <p>{area}</p>
         <p>{name}</p>
-        <button onClick={() => setOpen(prevState => !prevState)}>
+        <button onClick={(e) => {
+          e.stopPropagation();
+          setOpen(prevState => !prevState);
+        }}>
           {open ? (<img src={openIcon} alt="open" />) : (<img src={closeIcon} alt="close" />) }
         </button>
       </div>
