@@ -1,11 +1,12 @@
 import React, { useState } from "react";
 import openIcon from "../../assets/images/chapters/open.svg";
 import closeIcon from "../../assets/images/chapters/close.svg";
+import AccordionStyleWrapper from "./accordion.style";
 
 const Accordion = ({ area, name, topics }) => {
   const [open, setOpen] = useState(false);
   return (
-    <>
+    <AccordionStyleWrapper>
       <div className="accordion-title" onClick={() => setOpen(prevState => !prevState)}>
         <p>{area}</p>
         <p>{name}</p>
@@ -23,7 +24,7 @@ const Accordion = ({ area, name, topics }) => {
           )) }
         </div>
       )}
-    </>
+    </AccordionStyleWrapper>
   );
 };
 

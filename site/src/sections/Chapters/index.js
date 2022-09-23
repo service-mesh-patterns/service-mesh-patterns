@@ -1,11 +1,11 @@
 import React from "react";
 import ChaptersStyleWrapper from "./chapters.style";
 import chaptersData from "./chaptersData";
-import Accordion from "./Accordion";
+import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
 import healthIcon from "../../assets/images/chapters/healthicon.svg";
 import layer5Icon from "../../assets/images/chapters/layer5-white-no-trim.svg";
-import Callout from "./Callout";
+import Callout from "../../components/Callout";
 
 function Chapters() {
   return (

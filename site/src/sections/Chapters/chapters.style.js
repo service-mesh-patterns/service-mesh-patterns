@@ -19,57 +19,6 @@ const ChaptersStyleWrapper = styled.main`
     width: 75%;
     padding-block: 2rem;
 
-    .accordion-title, 
-    .topic {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 1rem 2rem;
-      border-radius: 5px; 
-      gap: 1rem;
-
-      @media (max-width: 600px) {
-        padding: 1rem;
-      }
-    }
-
-    .accordion-title {
-      color: white;
-      text-align: center;
-      background-color: #00B39F;
-      transition: 100ms ease-in-out;
-      cursor: pointer;
-      
-      button {
-        border: none;
-        background: none;
-        cursor: pointer;
-      }
-
-      &:hover {
-        outline: 1px solid #00B39F;
-      }
-    }
-
-    .accordion-content {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      gap: 1rem;
-      color: #00B39F;
-
-      .topic {
-        outline: 1px solid #00B39F;
-        background-color: #FFF;
-
-        p:nth-of-type(2) {
-          text-align: right;
-        }
-      }
-
-      
-    }
-
     @media (max-width: 600px) {
       width: 90%;
     }
@@ -104,34 +53,6 @@ const ChaptersStyleWrapper = styled.main`
     }
   }
   
-  .callout {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: #3C494F;
-    padding: 1rem .5rem;
-    border-radius: 5px; 
-    margin-block: 2rem;
-    text-align: center;
-    transition: 100ms ease-in-out;
-
-    .row {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: .5rem;
-    }
-
-    p {
-      color: white;
-    }
-
-    &:hover{
-      outline: 3px solid #00B39F;
-    }
-  }
-
 `;
 
 export default ChaptersStyleWrapper;
