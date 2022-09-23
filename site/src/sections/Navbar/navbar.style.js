@@ -151,18 +151,18 @@ export const NavItem = styled(Link)`
 
   .layer5{
     position: relative;
-    top: 25px;
-    right: 65px;
-    min-width: 140%;
+    top: 20px;
+    right: 60px;
+    min-width: 120%;
     @media (max-width: 991px) {
       position: relative;
       top: 20px;
-      right: 60px;
+      right: 55px;
     }
     @media (max-width: 912px) {
       position: relative;
       top: 20px;
-      right: 90px;
+      right: 85px;
     }
   }
 
