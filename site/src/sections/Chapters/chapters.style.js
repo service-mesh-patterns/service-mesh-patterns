@@ -32,6 +32,7 @@ const ChaptersStyleWrapper = styled.main`
     
 
     .community-button {
+      z-index: 1;
       gap: 1rem;
       align-items: center;
       justify-content: center;
