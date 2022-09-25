@@ -8,10 +8,10 @@ export  const Navigation = styled.nav`
     display: flex;
     background-color: #fff;
     justify-content: space-between;
-    border-bottom: 2px solid #33333320;
+    box-shadow: 0px 10px 25px rgba(0, 179, 159, 0.2);
     margin: 0 auto;
     padding: 0 5vw;
-    z-index: 2;
+    z-index: 3;
     align-self: center;
 
     @media (max-width: 912px) {
@@ -48,7 +48,15 @@ export const Navbox = styled.div`
     background-color: #fff;
     transition: all 0.3s ease-in;
     top: 12vh;
-    left: ${props => (props.open ? "-100%" : "0")};
+    left: ${props => (props.open ? "0" : "-100%")};
+  }
+
+  button {
+    margin-left: 1rem;
+
+    @media (max-width: 912px) {
+      margin: 2rem auto;
+    }
   }
 `;
 
@@ -87,7 +95,6 @@ export const Hamburger = styled.div`
 export const LogoWrap = styled.div`
   margin: auto 0;
   flex: 0 1 160px;
-  margin-left: 70px;
   @media (max-width: 912px) and (orientation: landscape) {
     flex: 0 1 160px;
   }
@@ -102,13 +109,12 @@ export const LogoWrap = styled.div`
 export const NavItem = styled(Link)`
   text-decoration: none;
   color: rgb(60, 73, 79);
-  white-space: nowrap;
-  margin: 0 1vw;
+  margin: 0 1rem;
   transition: all 200ms ease-in;
   position: relative;
-  gap: 6rem;
   position: relative;
-  bottom: 5px;
+  max-width: 6rem;
+  white-space: pre-wrap;
   
   :after {
     position: absolute;
@@ -130,35 +136,10 @@ export const NavItem = styled(Link)`
     }
   }
 
-  button{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
-    padding: 1.2rem 1.92rem;
-    height: 2.8rem;
-    background: #00B39F;
-    border-radius: 0.24rem;
-    position: relative;
-    top: 8px;
-    @media (max-width: 924px){
-      width: 80%;
-    }
-  }
-  button:hover{
-    cursor: pointer;
-  }
-
   .layer5{
     position: relative;
-    top: 20px;
-    right: 60px;
+    right: 8px;
     min-width: 120%;
-    @media (max-width: 991px) {
-      position: relative;
-      top: 20px;
-      right: 55px;
-    }
     @media (max-width: 912px) {
       position: relative;
       top: 20px;
@@ -167,8 +148,10 @@ export const NavItem = styled(Link)`
   }
 
   @media (max-width: 912px) {
-    padding: 20px 0;
+    margin: 20px 0;
     font-size: 1.5rem;
+    max-width: none;
+    white-space: nowrap;
     z-index: 6;
   }
 `;

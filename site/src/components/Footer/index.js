@@ -91,7 +91,7 @@ const Footer = () => {
                 title="Subscribe"
                 size="large"
                 variant="contained"
-                style={{ backgroundColor: "#00B39F" }}
+                style={{ backgroundColor: "#00B39F", zIndex: "1" }}
               />
             </Inputdiv>
           </form>
