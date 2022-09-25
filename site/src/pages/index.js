@@ -2,8 +2,12 @@ import * as React from "react";
 import Layout from "../components/layout";
 import SeoComponent from "../components/seo";
 import Hero from "../sections/Hero";
+
+import Navbar from "../sections/Navbar";
+
 import Footer from "../components/Footer/index";
 import About from "../sections/About";
+
 
 
 const IndexPage = () => {
@@ -23,9 +27,12 @@ const IndexPage = () => {
         schemaMarkup={schema}
       />
       <Layout>
+      
+        <Navbar />
         <Hero />
         <About />
         <Footer />
+        
       </Layout>
     </>
   );
