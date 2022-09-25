@@ -2,7 +2,8 @@ import React from "react";
 import ChaptersPage from "../sections/Chapters";
 import Layout from "../components/layout";
 import SeoComponent from "../components/seo";
-import Footer from "../components/Footer/index";
+import Navbar from "../components/Navbar";
+import Footer from "../components/Footer";
 
 const Chapters = () => {
   return (
@@ -12,6 +13,7 @@ const Chapters = () => {
         description="Chapters and topics found in the Service Mesh Patterns book"
       />
       <Layout>
+        <Navbar />
         <ChaptersPage />
         <Footer />
       </Layout>
