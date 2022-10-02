@@ -4,7 +4,6 @@ import styled from "styled-components";
 const AuthorStyleWrapper = styled.div`
     
     background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%);
-
     postion: fixed;
     
     .background-image {
@@ -12,9 +11,10 @@ const AuthorStyleWrapper = styled.div`
         height: 2288px;
         right: 0px;
         height: 100%;
-        mix-blend-mode: soft-light;
         background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%)
     }
+    
+
     .author-content{
         position: absolute;
         margin-top: 6%;

@@ -5,6 +5,7 @@ import Hero from "../sections/Hero";
 import SectionWrapper from "./index.style";
 import PatternsLogo from "../assets/images/brand/SVG/service-mesh-patterns-side_white.svg";
 
+
 const IndexPage = () => {
   const schema = {
     "@context": "https://schema.org",
