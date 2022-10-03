@@ -132,7 +132,7 @@ export const NavItem = styled(Link)`
   :hover {
     color: rgb(0, 211, 169);
     ::after {
-      width: 100%;
+      width: 85%;
     }
   }
 
