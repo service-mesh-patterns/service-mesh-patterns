@@ -1,27 +1,17 @@
 import styled from "styled-components";
 
-const HeroStyleWrapper = styled.div`
-    height: 53rem;
+const HeroStyleWrapper = styled.section`
     width: 100%;
     background-color: #00B39F;
     color: #FFF;
     display: flex;
-    postion: relative;
-    overflow: hidden;
+    position: relative;
+    margin: 0 auto 2rem;
     
     .content {
-        position: absolute;
         display: flex;
         justify-content: space-between;
         margin-inline: 10%;
-        margin-top: 6%;
-        @media(max-width: 950px) {
-            flex-direction: column;
-            align-items: center;
-            margin-inline: 0;
-            margin-top: 0%;
-            gap: 1rem;
-        }
     }
 
     .info {
@@ -30,7 +20,8 @@ const HeroStyleWrapper = styled.div`
         flex-direction: column;
         gap: 1em;
         margin-top: 4.5rem;
-        @media(max-width: 950px) {
+        align-self: center;
+        @media(max-width: 1200px) {
             width: 90%;
         }
     }
@@ -45,14 +36,30 @@ const HeroStyleWrapper = styled.div`
     }
 
     .description {
-        color: #fff;
+        color: rgba(255, 255, 255, 0.85);
+        font-style: italic;
         font-size: 1.5rem;
+        font-weight: 200;
     }
 
     .credit {
         display: flex;
         justify-content: flex-start;
         align-items: center;
+
+        .junction {
+            margin: 0 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-style: italic;
+            font-weight: 400;
+        }
+
+        .by-junction {
+            margin-right: 1rem;
+            color: rgba(255, 255, 255, 0.85);
+            font-style: italic;
+            font-weight: 400;
+        }
     }
     
     .author {
@@ -60,8 +67,6 @@ const HeroStyleWrapper = styled.div`
         justify-content: flex-start;
         align-items: center;
         gap: .75em;
-        width: 25%;
-        margin-left: 1rem;
 
         @media(max-width: 500px) {
             width: auto;
@@ -73,6 +78,7 @@ const HeroStyleWrapper = styled.div`
 
         .name {
             margin-top: 1rem;
+            font-weight: bold;
         }
     }
 
@@ -85,18 +91,28 @@ const HeroStyleWrapper = styled.div`
     }
 
     .cover{
-        width: 40%;
-        left: 58%;
-        top: 10%;
-        @media(max-width: 950px) {
-            width: 50%;
-        }
-        @media(max-width: 750px) {
-            width: 80%;
-        }
+        position: relative;
+        right: -5rem;
+        top: 2.5rem;
+        z-index: 2;
+        width: 38%;
+        box-shadow: 3px 5px 10px rgba(0, 0, 0, 0.25);
     }
 
+    @media(max-width: 1200px) {
+        margin: 0 auto 6rem;
 
+        .content {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .cover {
+            top: 3rem;
+            width: 70%;
+            right: 0;
+        }
+    }
 `;
 
 export default HeroStyleWrapper;
