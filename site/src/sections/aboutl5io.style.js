@@ -11,15 +11,11 @@ const AboutL5ioStyleWrapper = styled.div`
     right: 0px;
     height: 100%;
     mix-blend-mode: soft-light;
-    // background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%)
   }
 
   .about-title {
     width: 110px;
     height: 49px;
-
-    font-family: "Open Sans";
-    font-style: normal;
     font-weight: 700;
     font-size: 36px;
     line-height: 49px;
@@ -84,8 +80,6 @@ const AboutL5ioStyleWrapper = styled.div`
     gap: 32px;
   }
   .para {
-    font-family: "Open Sans";
-    font-style: normal;
     font-weight: 600;
     font-size: 20px;
     line-height: 27px;
@@ -93,27 +87,25 @@ const AboutL5ioStyleWrapper = styled.div`
 
     color: #3c494f;
   }
-    .join-comm-btn {
-      display: flex;
-      flex-direction: row;
-      justify-content: center;
-      align-items: center;
-      padding: 20px 32px;
-      gap: 12px;
-  
-      width: 366.43px;
-      height: 56px;
-      border: none;
-  
-      background: #00B39F;
-      border-radius: 4px;
-  
-    }
-  .join-comm-btn-img{
+  .join-comm-btn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 32px;
+    gap: 12px;
+
+    width: 366.43px;
+    height: 56px;
+    border: none;
+    background: #00b39f;
+    border-radius: 4px;
+  }
+  .join-comm-btn-img {
     display: inline-block;
     border: none;
   }
-  .join-l5-community-div{
+  .join-l5-community-div {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -121,14 +113,12 @@ const AboutL5ioStyleWrapper = styled.div`
     padding: 20px 32px;
     gap: 12px;
   }
-  .join-comm-para{
-    height:27px;
+  .join-comm-para {
+    height: 27px;
     margin-bottom: 0em;
-    font-family : 'Open Sans';
-    font-style: normal;
     font-weight: 600;
     line-height: 27px;
-    color: #3C494F;
+    color: #3c494f;
   }
 `;
 
