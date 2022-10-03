@@ -45,8 +45,8 @@ const Author= () => {
         </div>
         <section className="aboutNic">
           <div className="nic-paragraph">
-            <p className="hashi-corp-logo"> Developer Adovocate,</p>
-            <img className= "harshi-logo" src={Harshicorp} />
+            <p className="hashi-corp-logo"> Developer Advocate,</p>
+            <img className= "harshi-logo" src={Harshicorp} alt="logo" />
             <p className="nic">Nic Jackson is a developer advocate at HashiCorp, and the author of “Building Microservices in Go”, a book which examines the best patterns and practices for building microservices with the Go. Nic is also a coauthor of the Service Mesh Patterns book.
             </p>
             <div className="socials-nic">
@@ -56,7 +56,7 @@ const Author= () => {
             </div>
           </div>
           <div className="aboutNic-1">
-            <img className="nicphoto" src={NicPhoto} alt="Lee" />
+            <img className="nicphoto" src={NicPhoto} alt="Nic" />
             <p className="descriptionnic"> Nic Jackson </p>
           </div>
         </section>
@@ -65,7 +65,29 @@ const Author= () => {
         </section>
         <section className="technical-review-profile-section">
           <div className="technical-review-profiles">
-            <img className="Reviewer-1" src={Reviewer} />
+            <img className="Reviewer-1" src={Reviewer} alt="Matt"/>
+            <p className="technical-review-para">Matt Young</p>
+            <div className="socials-matt">
+              <img className="author-github-matt" src={Github} alt="Github" />
+              <img className="author-twitter-matt" src={Twitter} alt="Twitter" />
+              <img className="author-github-matt" src={LinkedIn} alt="Linkedin" />
+            </div>
+          </div>
+        </section>
+        <section className="technical-review-profile-section">
+          <div className="technical-review-profiles">
+            <img className="Reviewer-1" src={Reviewer} alt="Matt"/>
+            <p className="technical-review-para">Matt Young</p>
+            <div className="socials-matt">
+              <img className="author-github-matt" src={Github} alt="Github" />
+              <img className="author-twitter-matt" src={Twitter} alt="Twitter" />
+              <img className="author-github-matt" src={LinkedIn} alt="Linkedin" />
+            </div>
+          </div>
+        </section>
+        <section className="technical-review-profile-section">
+          <div className="technical-review-profiles">
+            <img className="Reviewer-1" src={Reviewer} alt="Matt"/>
             <p className="technical-review-para">Matt Young</p>
             <div className="socials-matt">
               <img className="author-github-matt" src={Github} alt="Github" />
