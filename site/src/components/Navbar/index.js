@@ -23,7 +23,7 @@ const Navbar = () => {
         <NavItem to="/authors">Meet the Authors</NavItem>
         {/* <NavItem to="/">Patterns in action</NavItem> */}
         <NavItem to="https://layer5.io/company/about" external={true}>About <img className="layer5" src={Layer5} alt="Layer5 logo" /></NavItem>
-        <Button secondary title="Get it Now" to="https://www.oreilly.com/library/view/service-mesh-patterns/9781492086444/" external={true} />
+        <Button url="https://www.oreilly.com/library/view/service-mesh-patterns/9781492086444/" external={true} secondary title="Get it Now" />
       </Navbox>
     </Navigation>
   );
