@@ -3,7 +3,6 @@
 import React from "react";
 
 //assets import
-// const Background = "../assets/images/aboutL5io/bckground.png";
 import JoinL5io from "../assets/images/aboutL5io/JoinLayer5.svg";
 import Layer5logo from "../assets/images/aboutL5io/Layer5Logo.svg";
 
@@ -15,7 +14,6 @@ import AboutL5ioStyleWrapper from "../sections/aboutl5io.style";
 const aboutL5io = () => {
   return (
     <AboutL5ioStyleWrapper>
-      {/* <StaticImage className="background-image" src={Background} alt="background"/> */}
       <div className="outer-box">
 
         <div className="div-box">
