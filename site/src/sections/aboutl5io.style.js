@@ -1,10 +1,7 @@
 import styled from "styled-components";
 
 const AboutL5ioStyleWrapper = styled.div`
-  //  background: radial-gradient(149.45% 344.41% at 102.05% -2.23%, #3C494F 0%, #00B39F 100%)
-
-  //  postion: fixed;
-
+  
   .background-image {
     position: fixed;
     height: 2288px;
