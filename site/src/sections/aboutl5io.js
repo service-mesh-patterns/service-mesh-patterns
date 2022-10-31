@@ -16,8 +16,8 @@ const aboutL5io = () => {
     <AboutL5ioStyleWrapper>
       <div className="outer-box">
 
-        <div className="div-box">
-          <h1 className="about-title">About</h1>
+        <div className="heading">
+          <h1 className="about-title">About </h1>
           <img  className="layer5-img" src = {Layer5logo} alt = "Layer5"/>
         </div>
         <div className="layer5-info-1">

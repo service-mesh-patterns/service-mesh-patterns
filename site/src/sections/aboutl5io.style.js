@@ -2,36 +2,28 @@ import styled from "styled-components";
 
 const AboutL5ioStyleWrapper = styled.div`
   
-  .background-image {
-    position: fixed;
-    height: 2288px;
-    right: 0px;
-    height: 100%;
-    mix-blend-mode: soft-light;
-  }
 
   .about-title {
-    width: 110px;
-    height: 49px;
-    font-weight: 700;
-    font-size: 36px;
-    line-height: 49px;
-
-    padding-top: 1px;
-
-    color: #3c494f;
     display: inline-block;
+    color: #3c494f;
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 49px;
+    padding-right: 12px;
+    
+
+   
   }
 
   .outer-box {
-    background-color: white;
+  
     width: 1072px;
     height: 556px;
     border-radius: 8px;
     margin: 0 auto;
   }
-  .div-box {
-    background-color: white;
+  .heading {
+    
     display: flex;
     align-items: center;
     justify-content: center;
