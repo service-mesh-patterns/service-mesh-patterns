@@ -45,7 +45,7 @@ const Author= () => {
             </section>
           ))}
           <section className="technical-review">
-            <h2>with Technical Review by</h2>
+            <h2>Technical Review by</h2>
             {technicalReviewers.map((reviewer, index) => (
               <div className="reviewers-section" key={index}>
                 <img src={reviewer.img} alt={reviewer.name} className="reviewer-img"/>
