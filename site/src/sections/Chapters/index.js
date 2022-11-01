@@ -10,7 +10,7 @@ import Callout from "../../components/Callout";
 function Chapters() {
   return (
     <ChaptersStyleWrapper>
-      <h1>Chapters of the book</h1>
+      <h1>Chapters of the Book</h1>
       <div className="accordion-container">
         {chaptersData.map((chapter, idx) => (
           <Accordion key={idx} area={chapter.area} name={chapter.name} topics={chapter.topics} />
