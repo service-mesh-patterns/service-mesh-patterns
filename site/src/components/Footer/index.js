@@ -60,13 +60,13 @@ const Footer = () => {
               Service Mesh Comparison
             </a>
             <a href="https://layer5.io/learn/service-mesh-labs">
-              Service Mesh Interativs Lab
+              Service Mesh Interactive Lab
             </a>
           </Resourceslink>
         </Resourcesdiv>
         <Maildiv>
           <h3>
-            Subcribe To Our <span>Mailling List</span>
+          Subscribe To Our <span>Mailing List</span>
           </h3>
           <form
             name="contactform"
