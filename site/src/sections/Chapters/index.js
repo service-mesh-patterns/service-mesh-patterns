@@ -5,7 +5,6 @@ import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
 import healthIcon from "../../assets/images/chapters/healthicon.svg";
 import layer5Icon from "../../assets/images/chapters/layer5-white-no-trim.svg";
-import Callout from "../../components/Callout";
 
 function Chapters() {
   return (
@@ -27,7 +26,6 @@ function Chapters() {
           <img src={healthIcon} alt="layer5 logo" />
         </Button>
       </section>
-      <Callout/>
     </ChaptersStyleWrapper>
   );
 }
