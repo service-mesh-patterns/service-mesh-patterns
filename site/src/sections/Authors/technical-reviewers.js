@@ -14,7 +14,7 @@ export const technicalReviewers = [
     "img": TomKerkhove,
     "github": "https://github.com/tomkerkhove",
     "twitter": "https://twitter.com/tomkerkhove",
-    "linkedin": "https://www.linkedin.com/"
+    "linkedin": "https://www.linkedin.com/tomkerkhove"
   },
   // {
   //     "name" : "Matt Young",
