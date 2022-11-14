@@ -48,7 +48,7 @@ const ChaptersStyleWrapper = styled.main`
     }
     @media (max-width: 1000px) {
       flex-direction: column; 
-      padding:20px;
+      padding:1.2rem;
       .community-button {
         padding: 1.5rem 2rem;
       }
