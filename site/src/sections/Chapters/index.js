@@ -5,12 +5,11 @@ import Accordion from "../../components/Accordion";
 import Button from "../../components/Button";
 import healthIcon from "../../assets/images/chapters/healthicon.svg";
 import layer5Icon from "../../assets/images/chapters/layer5-white-no-trim.svg";
-import Callout from "../../components/Callout";
 
 function Chapters() {
   return (
     <ChaptersStyleWrapper>
-      <h1>Chapters of the book</h1>
+      <h1>Chapters of the Book</h1>
       <div className="accordion-container">
         {chaptersData.map((chapter, idx) => (
           <Accordion key={idx} area={chapter.area} name={chapter.name} topics={chapter.topics} />
@@ -27,7 +26,6 @@ function Chapters() {
           <img src={healthIcon} alt="layer5 logo" />
         </Button>
       </section>
-      <Callout/>
     </ChaptersStyleWrapper>
   );
 }

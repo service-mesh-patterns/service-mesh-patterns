@@ -49,7 +49,7 @@ const Footer = () => {
           <h3>RESOURCES</h3>
           <Resourceslink>
             <a href="https://layer5.io/learn/learning-paths">Learning Paths</a>
-            <a href="https://layer5.io/resources">Resource library</a>
+            <a href="https://layer5.io/resources">Resource Library</a>
             <a href="https://layer5.io/learn/service-mesh-books">
               Service Mesh Books
             </a>
@@ -60,13 +60,13 @@ const Footer = () => {
               Service Mesh Comparison
             </a>
             <a href="https://layer5.io/learn/service-mesh-labs">
-              Service Mesh Interativs lab
+              Service Mesh Interactive Lab
             </a>
           </Resourceslink>
         </Resourcesdiv>
         <Maildiv>
           <h3>
-            Subcribe To Our <span>Mailling List</span>
+          Subscribe To Our <span>Mailing List</span>
           </h3>
           <form
             name="contactform"
