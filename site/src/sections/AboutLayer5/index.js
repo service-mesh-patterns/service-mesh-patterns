@@ -1,13 +1,11 @@
 import React from "react";
-import JoinL5io from "../assets/images/aboutL5io/JoinLayer5.svg";
-import Layer5logo from "../assets/images/aboutL5io/Layer5Logo.svg";
-import Container from "../components/Layout/Container";
-import Button from "../components/Button/index";
+import JoinL5io from "../../assets/images/aboutL5io/JoinLayer5.svg";
+import Layer5logo from "../../assets/images/brand/SVG/Layer5.svg";
+import Container from "../../components/Layout/Container";
+import Button from "../../components/Button/index";
+import AboutL5ioStyleWrapper from "./aboutl5io.style";
 
-//styl imprt
-import AboutL5ioStyleWrapper from "../sections/aboutl5io.style";
 
-// import { StaticImage } from "gatsby-plugin-image";
 
 const aboutL5io = () => {
   return (
