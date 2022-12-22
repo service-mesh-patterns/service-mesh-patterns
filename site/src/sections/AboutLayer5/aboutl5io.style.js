@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 const AboutL5ioStyleWrapper = styled.div`
+  margin: 0.5rem auto 3rem;
   .outer-box {
     display: flex;
     flex-direction: column;
@@ -8,8 +9,6 @@ const AboutL5ioStyleWrapper = styled.div`
     border-radius: 8px;
     margin: 0 auto;
 
-    @media only screen and (max-width: 768px) {
-    }
   }
   .about-title {
     display: inline-block;
@@ -66,9 +65,6 @@ const AboutL5ioStyleWrapper = styled.div`
     gap: 32px;
   }
   .para {
-    font-weight: 600;
-    font-size: 20px;
-    line-height: 27px;
     text-align: justify;
 
     color: #3c494f;
@@ -106,7 +102,7 @@ const AboutL5ioStyleWrapper = styled.div`
 
   @media only screen and (max-width: 768px) {
     .outer-box {
-      margin: 4rem auto;
+      margin: 2rem auto;
     }
 
     .join-l5-community-div {
