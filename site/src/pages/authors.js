@@ -4,6 +4,7 @@ import Layout from "../components/layout";
 import SeoComponent from "../components/seo";
 import Navbar from "../components/Navbar";
 import Footer from "../components/Footer";
+import AboutL5io from "../sections/AboutLayer5/index";
 
 const Authors = () => {
   return (
@@ -15,6 +16,7 @@ const Authors = () => {
       <Layout>
         <Navbar />
         <Author />
+        <AboutL5io/>
         <Footer />
       </Layout>
     </>
