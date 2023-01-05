@@ -14,7 +14,3 @@ services:
     settings:
       version: $(#ref.vars.istioVersion) #Version from here has been deprecated and will be removed soon after
       profile: $(#ref.vars.profile)
-    traits:
-      automaticSidecarInjection:
-        namespaces:
-          - $(#ref.vars.namespace)
