@@ -3,8 +3,8 @@
 </div>
 <p align="center">
 <picture align="center">
-<source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/service-mesh-patterns-side_white.svg" width="70%" align="center" style="margin-bottom:20px;">
-<source media="(prefers-color-scheme: light)" srcset=".github/readme/images/logo_with_text.svg" width="70%" align="center" style="margin-bottom:20px;">
+<source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/logo_with_text_white.svg" width="70%" align="center" style="margin-bottom:20px;">
+<source media="(prefers-color-scheme: light)" srcset=".github/readme/images/logo_with_text_black.svg" width="70%" align="center" style="margin-bottom:20px;">
 <img alt="Shows an illustrated light mode mesh pattern logo in light color mode and a dark mode mesh pattern dark color mode." src=".github/readme/images/logo_with_text.svg" width="70%" align="center" style="margin-bottom:20px;">
 </p>
 
