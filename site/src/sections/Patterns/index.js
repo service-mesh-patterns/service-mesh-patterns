@@ -2,6 +2,8 @@ import React from "react";
 import PatternsStyleWrapper from "./patterns.style";
 import Container from "../../components/Layout/Container";
 import howItWorksVideo from "../../assets/videos/how-it-works.mp4";
+import pattern from "../../assets/images/brand/SVG/service-mesh-pattern.svg";
+import Button from "../../components/Button";
 
 function Patterns() {
   return (
@@ -22,6 +24,13 @@ function Patterns() {
           <video className="how-it-works-video" controls>
             <source src={howItWorksVideo} type="video/mp4" />
           </video>
+        </section>
+        <section className="patterns">
+          <div className="pattern-logo">
+            <img className="logo" src={pattern} alt="Patterns Logo" />
+            <Button className="btn" url="/" secondary title="Patterns" />
+          </div>
+          <p className="tagline">Easily import any catalog item into Meshery.</p>
         </section>
       </Container>
     </PatternsStyleWrapper>

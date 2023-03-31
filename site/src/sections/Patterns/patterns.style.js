@@ -47,6 +47,34 @@ const PatternsStyleWrapper = styled.main`
       }
     }
   }
+
+  .patterns {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    @media (max-width: 62rem) {
+      padding-top: 36px;
+    }
+    .pattern-logo {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .logo {
+        margin: 0 10px;
+        width: 125px;
+      }
+      .btn {
+        margin: 0 10px;
+        padding: 10px;
+      }
+    }
+    .tagline {
+      font-style: italic;
+      text-align: center;
+      font-weight: 300;
+      padding: 10px 0;
+    }
+  }
   
 `;
 
