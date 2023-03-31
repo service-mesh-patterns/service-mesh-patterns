@@ -10,10 +10,41 @@ const PatternsStyleWrapper = styled.main`
     padding-block: 2rem;
   }
 
-  .overview-description {
-    padding: 40px 0px;
+  section {
+    padding-bottom: 20px;
     @media (max-width: 62rem) {
-      padding: 20px 0px;
+      padding-bottom: 0;
+    }
+  }
+
+  .overview {
+    .overview-description {
+      padding: 40px 0px;
+      @media (max-width: 62rem) {
+        padding: 20px 0px;
+      }
+    }
+  }
+
+  .how-it-works {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    h2 {
+      text-align: center;
+      font-weight: bold;
+      span {
+        display: block;
+        font-size: 20px;
+      }
+    }
+    .how-it-works-video {
+      padding: 40px 0;
+      width: 95%;
+      margin: 0 auto;
+      @media (max-width: 62rem) {
+        padding: 20px 0px;
+      }
     }
   }
   
