@@ -3,6 +3,7 @@ import PatternsStyleWrapper from "./patterns.style";
 import Container from "../../components/Layout/Container";
 import howItWorksVideo from "../../assets/videos/how-it-works.mp4";
 import pattern from "../../assets/images/brand/SVG/service-mesh-pattern.svg";
+import meshery from "../../assets/images/brand/PNG/meshery-logo.png";
 import Button from "../../components/Button";
 
 function Patterns() {
@@ -31,6 +32,18 @@ function Patterns() {
             <Button className="btn" url="/" secondary title="Patterns" />
           </div>
           <p className="tagline">Easily import any catalog item into Meshery.</p>
+        </section>
+        <section className="try-meshmap">
+          <div className="meshmap">
+            <img className="logo" src={meshery} alt="Meshery Logo" />
+            <div className="meshery-detail">
+              <div className="title">
+                <p>The extensible Kubernetes Manager, Run</p>
+                <p>Meshery today!</p>
+              </div>
+              <Button className="btn" url="/" secondary title="Try MeshMap" />
+            </div>
+          </div>
         </section>
       </Container>
     </PatternsStyleWrapper>

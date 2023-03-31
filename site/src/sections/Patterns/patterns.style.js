@@ -66,6 +66,7 @@ const PatternsStyleWrapper = styled.main`
       .btn {
         margin: 0 10px;
         padding: 10px;
+        z-index: 0;
       }
     }
     .tagline {
@@ -73,6 +74,62 @@ const PatternsStyleWrapper = styled.main`
       text-align: center;
       font-weight: 300;
       padding: 10px 0;
+    }
+  }
+
+  .try-meshmap {
+    padding-bottom: 80px;
+    @media (max-width: 62rem) {
+      padding-bottom: 40px;
+    }
+    .meshmap {
+      display: flex;
+      justify-content: space-between;
+      padding: 50px;
+      border-radius: 10px;
+      background: linear-gradient(108.15deg, rgba(0, 0, 0, 0.58) 13.46%, rgba(0, 0, 0, 0.46) 32.08%, rgba(0, 0, 0, 0.81) 41.96%, #000000 92.13%);
+      color: white;
+      @media (max-width: 62rem) {
+        padding: 20px 0 40px 0;
+        flex-direction: column;
+        justify-content: center;
+      }
+      .logo {
+        flex: 1;
+        width: 210px;
+        @media (max-width: 62rem) {
+          margin: 0 auto 20px auto;
+        }
+      }
+      .meshery-detail {
+        width: 70%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: end;
+        @media (max-width: 62rem) {
+          width: 100%;
+          align-items: center;
+        }
+        .title p {
+          font-size: 34px;
+          @media (max-width: 62rem) {
+            font-size: 28px;
+            text-align: center;
+            margin-bottom: 0;
+          }
+        }
+        .btn {
+          margin-top: 50px;
+          background: #EBC017;
+          padding: 10px 60px;
+          z-index: 0;
+          font-size: 20px;
+          @media (max-width: 62rem) {
+            margin-top: 40px;
+          }
+        }
+      }
     }
   }
   
