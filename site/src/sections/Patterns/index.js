@@ -5,6 +5,8 @@ import howItWorksVideo from "../../assets/videos/how-it-works.mp4";
 import pattern from "../../assets/images/brand/SVG/service-mesh-pattern.svg";
 import meshery from "../../assets/images/brand/PNG/meshery-logo.png";
 import Button from "../../components/Button";
+import patternsData from "./patternData";
+import PatternCard from "./patternCard";
 
 function Patterns() {
   return (
@@ -32,6 +34,11 @@ function Patterns() {
             <Button className="btn" url="/" secondary title="Patterns" />
           </div>
           <p className="tagline">Easily import any catalog item into Meshery.</p>
+          <div className="pattern-card">
+            {patternsData.map((pattern, idx) => (
+              <PatternCard key={idx} title={pattern.title} label={pattern.label} image={pattern.image} />
+            ))}
+          </div>
         </section>
         <section className="try-meshmap">
           <div className="meshmap">

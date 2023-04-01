@@ -132,6 +132,64 @@ const PatternsStyleWrapper = styled.main`
       }
     }
   }
+
+  .pattern-card {
+    padding: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    @media (max-width: 62rem) {
+      padding: 20px 0 30px 0;
+    }
+    .card {
+      background: #F7F7F7;
+      box-shadow: 0px 0px 8.44601px #00D3A9;
+      border-radius: 12.0657px;
+      padding: 0 0 20px 0;
+      width: 100%;
+      margin-left: 0;
+      margin-bottom: 30px;
+      @media (min-width: 36rem) {
+        width: calc(50% - 25px);
+        margin-left: 25px;
+      }
+      @media (min-width: 62rem) {
+        width: calc(33% - 25px);
+        margin-left: 25px;
+      }
+      @media (min-width: 75rem) {
+        margin-left: 25px;
+        margin-bottom: 50px;
+        width: calc(25% - 25px);
+      }
+      .label {
+        font-weight: 400;
+        font-size: 12px;
+        color: #F7F7F7;
+        background: #00D3A9;
+        border-radius: 0px 11px 0px 0px;
+        width: fit-content;
+        margin-left: auto;
+        padding: 0 20px;
+      }
+      .diagram {
+        display: flex;
+        width: 180px;
+        margin: 0 auto;
+        padding: 20px 0;
+      }
+      .title {
+        font-weight: 600;
+        font-size: 20px;
+        display: flex;
+        width: 100%;
+        justify-content: center;
+        color: #000000;
+        text-align: center;
+      }
+    }
+  }
+
   
 `;
 
