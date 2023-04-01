@@ -3,7 +3,7 @@ import PatternsStyleWrapper from "./patterns.style";
 import Container from "../../components/Layout/Container";
 import howItWorksVideo from "../../assets/videos/how-it-works.mp4";
 import pattern from "../../assets/images/brand/SVG/service-mesh-pattern.svg";
-import meshery from "../../assets/images/brand/PNG/meshery-logo.png";
+import meshery from "../../assets/images/brand/SVG/meshery-logo.svg";
 import Button from "../../components/Button";
 import patternsData from "./patternData";
 import PatternCard from "./patternCard";

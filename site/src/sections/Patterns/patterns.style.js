@@ -95,7 +95,6 @@ const PatternsStyleWrapper = styled.main`
         justify-content: center;
       }
       .logo {
-        flex: 1;
         width: 210px;
         @media (max-width: 62rem) {
           margin: 0 auto 20px auto;
@@ -113,6 +112,7 @@ const PatternsStyleWrapper = styled.main`
         }
         .title p {
           font-size: 34px;
+          font-weight: 600;
           @media (max-width: 62rem) {
             font-size: 28px;
             text-align: center;
@@ -125,6 +125,7 @@ const PatternsStyleWrapper = styled.main`
           padding: 10px 60px;
           z-index: 0;
           font-size: 20px;
+          font-weight: 600;
           @media (max-width: 62rem) {
             margin-top: 40px;
           }
