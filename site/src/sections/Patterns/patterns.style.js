@@ -36,6 +36,7 @@ const PatternsStyleWrapper = styled.main`
       span {
         display: block;
         font-size: 20px;
+        font-weight: 500;
       }
     }
     .how-it-works-video {
@@ -144,8 +145,8 @@ const PatternsStyleWrapper = styled.main`
     }
     .card {
       background: #F7F7F7;
-      box-shadow: 0px 0px 8.44601px #00D3A9;
-      border-radius: 12.0657px;
+      box-shadow: 0px 0px 8px #00D3A9;
+      border-radius: 12px;
       padding: 0 0 20px 0;
       width: 100%;
       margin-left: 0;
