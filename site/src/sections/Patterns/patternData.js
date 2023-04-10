@@ -4,8 +4,8 @@ import pattern3 from "../../assets/images/patterns/circuit-breaker.svg";
 
 const patternsData = [
   {
-    title: "Service Mesh Adapter",
-    label: "Traffic management",
+    title: "Circuit Breaker with Deadline",
+    label: "Deployment",
     image: pattern1
   },
   {
@@ -14,13 +14,13 @@ const patternsData = [
     image: pattern2
   },
   {
-    title: "Low Rate Limiter",
-    label: "Traffic management",
+    title: "Expanded Rate Limiter",
+    label: "Traffic Management",
     image: pattern3
   },
   {
-    title: "Untitle Design",
-    label: "Depolyment",
+    title: "Path-based Routing",
+    label: "Traffic Management",
     image: pattern1
   },
   {
@@ -29,18 +29,18 @@ const patternsData = [
     image: pattern1
   },
   {
-    title: "IstioInstallation For Catalog",
-    label: "Depolyment",
+    title: "Production Linkerd Deployment",
+    label: "Deployment",
     image: pattern1
   },
   {
-    title: "Duration Base Canary",
-    label: "Traffic management",
+    title: "Time-based Canary",
+    label: "Traffic Management",
     image: pattern1
   },
   {
-    title: "Basic Istio Install",
-    label: "Traffic management",
+    title: "Segregating traffic with policy",
+    label: "Security",
     image: pattern1
   }
 ];
