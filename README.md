@@ -2,7 +2,10 @@
 <h1 align="center">Service Mesh Patterns</h1>
 </div>
 <p align="center">
-    <img width="60%" src=".github/readme/images/logo_with_text.svg">
+<picture align="center">
+<source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/logo_with_text_white.svg" width="70%" align="center" style="margin-bottom:20px;">
+<source media="(prefers-color-scheme: light)" srcset=".github/readme/images/logo_with_text_black.svg" width="70%" align="center" style="margin-bottom:20px;">
+<img alt="Shows an illustrated light mode mesh pattern logo in light color mode and a dark mode mesh pattern dark color mode." src=".github/readme/images/logo_with_text_black.svg" width="70%" align="center" style="margin-bottom:20px;">
 </p>
 
 <h5><p align="center"><i>If you’re using this project or simply like its concept, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
