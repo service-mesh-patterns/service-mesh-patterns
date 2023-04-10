@@ -21,8 +21,8 @@ function Patterns() {
         </section>
         <section className="how-it-works">
           <h2>
-            How it Works
-            <span>See It in Action</span>
+            How Cloud Native Patterns Work
+            <span>Meshery in-Action</span>
           </h2>
           <video className="how-it-works-video" controls>
             <source src={howItWorksVideo} type="video/webm" />
@@ -30,25 +30,26 @@ function Patterns() {
         </section>
         <section className="patterns">
           <div className="pattern-logo">
+
             <img className="logo" src={pattern} alt="Patterns Logo" />
-            <Button className="btn" url="/patterns" secondary title="Patterns" />
+            <Button className="btn" url="/patterns" secondary title="Open Meshery Catalog" />
           </div>
-          <p className="tagline">Easily import any catalog item into Meshery.</p>
+          <p className="tagline">Easily import any pattern into Meshery.</p>
           <div className="pattern-card">
             {patternsData.map((pattern, idx) => (
               <PatternCard key={idx} title={pattern.title} label={pattern.label} image={pattern.image} />
             ))}
           </div>
         </section>
-        <section className="try-meshmap">
-          <div className="meshmap">
+        <section className="try-meshery">
+          <div className="meshery">
             <img className="logo" src={meshery} alt="Meshery Logo" />
             <div className="meshery-detail">
               <div className="title">
-                <p>The extensible Kubernetes Manager, Run</p>
-                <p>Meshery today!</p>
+                {/* <p>The extensible Kubernetes manager.</p> */}
+                <p>Drag-and-drop your cloud native infrastructure using a pallete of thousands of versioned Kubernetes components.</p>
               </div>
-              <Button className="btn" external url="https://layer5.io/meshmap" secondary title="Try MeshMap" />
+              <Button className="meshery-btn" external url="https://layer5.io/meshmap" secondary title="Try MeshMap" />
             </div>
           </div>
         </section>

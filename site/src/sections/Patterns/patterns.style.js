@@ -77,18 +77,39 @@ const PatternsStyleWrapper = styled.main`
       padding: 10px 0;
     }
   }
+  .button {
+      z-index: 1;
+      gap: 1rem;
+      align-items: center;
+      justify-content: center;
+      color: #FFF;
+      background-color: #00B39F;
+      padding: 2rem 4rem;
+      transition: 100ms ease-in-out;
 
-  .try-meshmap {
+      &:hover{
+        outline: 2px solid #00B39F;
+      }
+ 
+    }
+    @media (max-width: 1000px) {
+      flex-direction: column; 
+      padding:1.2rem;
+      .community-button {
+        padding: 1.5rem 2rem;
+      }
+    }
+  .try-meshery {
     padding-bottom: 80px;
     @media (max-width: 62rem) {
       padding-bottom: 40px;
     }
-    .meshmap {
+    .meshery {
       display: flex;
       justify-content: space-between;
       padding: 50px;
       border-radius: 10px;
-      background: linear-gradient(108.15deg, rgba(0, 0, 0, 0.58) 13.46%, rgba(0, 0, 0, 0.46) 32.08%, rgba(0, 0, 0, 0.81) 41.96%, #000000 92.13%);
+      background: linear-gradient(18.15deg, rgba(0, 0, 0, 0.95) 13.46%, rgba(0, 0, 0, 0.76) 12.08%, rgba(0, 0, 0, 0.81) 41.96%, #000000 92.13%);
       color: white;
       @media (max-width: 62rem) {
         padding: 20px 0 40px 0;
@@ -112,15 +133,16 @@ const PatternsStyleWrapper = styled.main`
           align-items: center;
         }
         .title p {
-          font-size: 34px;
+          font-size: 2.125rem;
           font-weight: 600;
+          line-height: 2.3rem;
           @media (max-width: 62rem) {
-            font-size: 28px;
+            font-size: 1.75rem;
             text-align: center;
             margin-bottom: 0;
           }
         }
-        .btn {
+        .meshery-btn {
           margin-top: 50px;
           background: #EBC017;
           padding: 10px 60px;
