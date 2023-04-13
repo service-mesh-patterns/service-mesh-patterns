@@ -1,0 +1,38 @@
+name: Namespaced Workload
+services:
+  namespacetest:
+    type: Service.K8s
+    namespace: default
+    settings:
+      name: ServiceTest
+      namespace: default
+      spec:
+        clusterIP: ""
+        ports:
+        - port: 9001
+          protocol: TCP
+        type: ClusterIP
+    traits:
+      meshmap:
+        edges: []
+        id: 23e9fd15-e96a-4961-b3c1-4ef6b162bb94
+        label: test
+        parent: a38df2cf-a096-4bfe-b1b5-33c23520d14e
+        position:
+          posX: 180.3371199795211
+          posY: 440.21773440034656
+  a38df2cf-a096-4bfe-b1b5-33c23520d14e:
+    type: Namespace.K8s
+    namespace: default
+    settings:
+      name: default
+      namespace: default
+    traits:
+      meshmap:
+        edges: []
+        id: a38df2cf-a096-4bfe-b1b5-33c23520d14e
+        label: default
+        position:
+          posX: 180.44435064752923
+          posY: 449.21773440034656
+

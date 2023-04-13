@@ -2,12 +2,15 @@
 <h1 align="center">Service Mesh Patterns</h1>
 </div>
 <p align="center">
-    <img width="60%" src=".github/readme/images/logo_with_text.svg">
+<picture align="center">
+<source media="(prefers-color-scheme: dark)" srcset=".github/readme/images/logo_with_text_white.svg" width="70%" align="center" style="margin-bottom:20px;">
+<source media="(prefers-color-scheme: light)" srcset=".github/readme/images/logo_with_text_black.svg" width="70%" align="center" style="margin-bottom:20px;">
+<img alt="Shows an illustrated light mode mesh pattern logo in light color mode and a dark mode mesh pattern dark color mode." src=".github/readme/images/logo_with_text_black.svg" width="70%" align="center" style="margin-bottom:20px;">
 </p>
 
 <h5><p align="center"><i>If you’re using this project or simply like its concept, please <a href="https://github.com/layer5io/meshery/stargazers">★</a> this repository to show your support! 🤩</i></p></h5>
 
-This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastruture and application deployments and applying best practices.
+This repository contains a collection of functional examples to be used as patterns for operationalizing cloud native infrastructure and application deployments and applying best practices.
 
 A service mesh is a layer in your infrastructure that facilitates communication between services… and so much more. Its value is enormous, and the value you derive from one is very much related to what role you play in the design, implementation, and operations of your cloud native applications and infrastructure. Service mesh patterns help you get the most out of Linkerd, Consul, App Mesh, Istio, Kuma, Open Service Mesh or <a href="https://layer5.io/service-mesh-landscape">any service mesh</a>, including those using Envoy and use of WebAssembly. Each pattern can be used as a template and is customizable.
 
@@ -73,7 +76,7 @@ In case of any doubts and clarifications, you can always have a look at the <a h
 ## Join the service mesh community!
 
 <a name="contributing"></a><a name="community"></a>
-Our projects are community-built and welcome collaboration. 👍 Be sure to see the <a href="https://docs.google.com/document/d/17OPtDE_rdnPQxmk2Kauhm3GwXF1R5dZ3Cj8qZLKdo5E/edit">Layer5 Community Welcome Guide</a> for a tour of resources available to you and jump into our <a href="http://slack.layer5.io">Slack</a>!
+Our projects are community-built and welcome collaboration. 👍 Be sure to see the <a href="https://layer5.io/community/newcomers">Layer5 Newcomers' Guide</a> for a tour of resources available to you and jump into our <a href="http://slack.layer5.io">Slack</a>!
 
 <p style="clear:both;">
 <a href ="https://layer5.io/community/meshmates"><img alt="MeshMates" src=".github/readme/images/Layer5-Community.png" style="margin-right:10px; margin-bottom:7px;align="left" /></a>

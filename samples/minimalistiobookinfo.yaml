@@ -1,0 +1,20 @@
+#Pre-requisite: A Kubernetes cluster. 
+#Description: This design installs the Istio control plane version 1.12.0 with minimal configuration and deploys the "Book Info" sample application. 
+#Caveats: This design is currenly unsupported in MeshMap designer, but is supported by mesheryctl and Meshery Server
+name: istio
+services:
+  istioinstallation:
+    type: $(#use https://raw.githubusercontent.com/service-mesh-patterns/service-mesh-patterns/master/samples/istioinstall.yaml)
+    settings: 
+        controlplaneNS: istio-system
+        namespace: default
+        istioVersion: 1.12.0
+        profile: minimal
+  bookinfo:
+    type: $(#use https://raw.githubusercontent.com/service-mesh-patterns/service-mesh-patterns/master/samples/bookInfoPattern.yaml)
+    settings: 
+      namespace: default
+    dependsOn:
+      - istioinstallation
+
+  

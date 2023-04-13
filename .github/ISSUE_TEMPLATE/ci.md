@@ -3,7 +3,7 @@ name: 🛠 Continuous Integration / DevOps
 about: Improve or update workflows or other automation
 title: '[CI]'
 labels: 'area/ci'
-assignees: ''
+assignees: 'maintainers'
 ---
 #### Current Behavior
 <!-- A brief description of what the problem is. (e.g. I need to be able to...) -->
@@ -17,5 +17,8 @@ assignees: ''
 #### Acceptance Tests
 <!-- Stipulations of functional behavior or non-functional items that must be in-place in order for the issue to be closed. -->
 
-#### Reference:
-- [Meshery Build & Release Strategy](https://docs.google.com/document/d/11nAxYtz2SUusCYZ0JeNRrOLIxkgmmbUVWz63MBZV2oE/edit#)
+---
+#### Contributor Guides and Resources
+- 🛠 [Meshery Build & Release Strategy](https://docs.meshery.io/project/build-and-release)
+- 📚 [Instructions for contributing](https://github.com/service-mesh-patterns/service-mesh-patterns/blob/master/CONTRIBUTING.md)
+- 🙋🏾🙋🏼 Questions: [Discussion Forum](https://discuss.layer5.io) and [Community Slack](http://slack.layer5.io)
