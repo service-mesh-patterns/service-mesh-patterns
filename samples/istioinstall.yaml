@@ -9,6 +9,7 @@ vars:
 services:
   istioservicemesh:
     type: IstioMesh
+    model: ISTIO
     namespace:  $(#ref.vars.controlplaneNS)
     version: $(#ref.vars.istioVersion)
     settings:
