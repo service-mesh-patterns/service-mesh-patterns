@@ -5,6 +5,7 @@ services:
   istioservicemesh:
     type: IstioMesh
     namespace: istio-system
+    model: ISTIO
     version: 1.12.0
     settings:
       version: 1.12.0 #Version from here has been deprecated and will be removed soon after
