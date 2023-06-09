@@ -77,11 +77,12 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: details
+            version: v1
         template:
           metadata:
             labels:
-              deploy: istio-book-info-details
+              app: details
               version: v1
           spec:
             containers:
@@ -117,11 +118,12 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: productpage
+            version: v1
         template:
           metadata:
             labels:
-              deploy: istio-book-info-productpage
+              app: productpage
               version: v1
           spec:
             containers:
@@ -171,11 +173,12 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: ratings
+            version: v1
         template:
           metadata:
             labels:
-              deploy: istio-book-info-ratings
+              app: ratings
               version: v1
           spec:
             containers:
@@ -208,13 +211,13 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: reviews
+            version: v1
         template:
           metadata:
             labels:
-              deploy: istio-book-info-reviews-v1
+              app: reviews
               version: v1
-              custom.app: reviews
           spec:
             containers:
             - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.4
@@ -243,13 +246,13 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: reviews
+            version: v2
         template:
           metadata:
             labels:
-              deploy: istio-book-info-reviews-v2
+              app: reviews
               version: v2
-              custom.app: reviews
           spec:
             containers:
             - image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.4
@@ -278,13 +281,13 @@ services:
         replicas: 1
         selector:
           match Labels:
-            deploy: istio
+            app: reviews
+            version: v3
         template:
           metadata:
             labels:
-              deploy: istio-book-info-reviews-v3
+              app: reviews
               version: v3
-              custom.app: reviews
           spec:
             containers:
             - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.4
