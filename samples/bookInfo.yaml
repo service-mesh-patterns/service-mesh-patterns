@@ -75,7 +75,6 @@ services:
               name: details
               ports:
               - container Port: 9080
-                host Port: 9080
                 protocol: TCP
     traits:
       meshmap:
@@ -116,7 +115,6 @@ services:
               name: productpage
               ports:
               - container Port: 9080
-                host Port: 9080
                 protocol: TCP
     traits:
       meshmap:
@@ -171,7 +169,6 @@ services:
               name: ratings
               ports:
               - container Port: 9080
-                host Port: 9080
                 protocol: TCP
     traits:
       meshmap:
@@ -209,7 +206,6 @@ services:
               name: reviews-v1
               ports:
               - container Port: 9080
-                host Port: 9080
                 protocol: TCP
     traits:
       meshmap:
@@ -244,7 +240,6 @@ services:
               name: reviews-v2
               ports:
               - container Port: 9080
-                host Port: 9080
                 protocol: TCP
     traits:
       meshmap:
