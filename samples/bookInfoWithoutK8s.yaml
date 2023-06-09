@@ -1,49 +1,34 @@
 name: bookInfoPatternIstio
 services:
   bookinfo-vs:
-    name: bookinfo-vs
+    name: bookinfo
     type: VirtualService
-    model: istio
+    apiVersion: networking.istio.io/v1alpha3
     namespace: default
+    model: istio
     settings:
-      gateways:
-      - sample-app-gateway
-      hosts:
-      - book
-      http:
-      - cors Policy:
-          allow Credentials: false
-        fault:
-          delay:
-            fixedDelay: 7s
-            percentage:
-              value: 100
-        match:
-        - ignore Uri Case: false
-          uri:
-            exact: /productpage
-        - ignore Uri Case: false
-          uri:
-            prefix: /static
-        - ignore Uri Case: false
-          uri:
-            exact: /login
-        - ignore Uri Case: false
-          uri:
-            exact: /logout
-        - ignore Uri Case: false
-          uri:
-            prefix: /api/v1/products
-        retries:
-          attempts: 2
-          retry Remote Localities: false
-        route:
-        - destination:
-            host: productpage
-            port:
-              number: 9080
-      name: bookinfo-vs
-      namespace: default
+      spec:
+        gateways:
+        - bookinfo-gateway
+        hosts:
+        - '*'
+        http:
+        - match:
+          - uri:
+              exact: /productpage
+          - uri:
+              prefix: /static
+          - uri:
+              exact: /login
+          - uri:
+              exact: /logout
+          - uri:
+              prefix: /api/v1/products
+          route:
+          - destination:
+              host: productpage
+              port:
+                number: 9080
     traits:
       meshmap:
         edges:
@@ -314,24 +299,22 @@ services:
           posX: 487.1949722175878
           posY: 216.40590828780256
   sample-app-gateway:
-    name: sample-app-gateway
+    name: bookinfo-gateway
     type: Gateway
-    model: istio
+    apiVersion: networking.istio.io/v1alpha3
     namespace: default
+    model: istio
     settings:
-      name: sample-app-gateway
-      namespace: default
-      selector:
-        istio: ingressgateway
-      servers:
-      - hosts:
-        - bookinfo.meshery.io
-        port:
-          name: http
-          number: 80
-          protocol: HTTP
-        tls:
-          https Redirect: false
+      spec:
+        selector:
+          istio: ingressgateway
+        servers:
+        - hosts:
+          - '*'
+          port:
+            name: http
+            number: 80
+            protocol: HTTP
     traits:
       meshmap:
         edges:
