@@ -2,7 +2,8 @@ name: bookInfoPatternIstio
 services:
   bookinfo-vs:
     name: bookinfo-vs
-    type: VirtualService.Istio
+    type: VirtualService
+    model: istio
     namespace: default
     settings:
       gateways:
@@ -67,21 +68,29 @@ services:
           posY: 252.91020252903866
   details:
     name: details
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        labels:
-          version: v1
-      containers:
-      - image: docker.io/istio/examples-bookinfo-details-v1:1.16.4
-        name: details
-        ports:
-        - container Port: 9080
-          name: http
-      name: details
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-details
+              version: v1
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-details-v1:1.16.4
+              name: details
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges:
@@ -99,21 +108,29 @@ services:
           posY: 354.42308525274734
   productpage:
     name: productpage
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        labels:
-          version: v1
-      containers:
-      - image: docker.io/istio/examples-bookinfo-productpage-v1:1.16.4
-        name: productpage
-        ports:
-        - container Port: 9080
-          name: http
-      name: productpage
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-productpage
+              version: v1
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-productpage-v1:1.16.4
+              name: productpage
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges:
@@ -145,21 +162,29 @@ services:
           posY: 251.99096159520772
   ratings:
     name: ratings
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        labels:
-          version: v1
-      containers:
-      - image: docker.io/istio/examples-bookinfo-ratings-v1:1.16.4
-        name: ratings
-        ports:
-        - container Port: 9080
-          name: http
-      name: ratings
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-ratings
+              version: v1
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-ratings-v1:1.16.4
+              name: ratings
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges:
@@ -174,23 +199,30 @@ services:
           posY: 391
   reviews-v1:
     name: reviews-v1
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        create_service: false
-        labels:
-          custom.app: reviews
-          version: v1
-      containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.4
-        name: reviews
-        ports:
-        - container Port: 9080
-          name: http
-      name: reviews-v1
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-reviews-v1
+              version: v1
+              custom.app: reviews
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-reviews-v1:1.16.4
+              name: reviews-v1
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges: []
@@ -202,23 +234,30 @@ services:
           posY: 91.09492322951635
   reviews-v2:
     name: reviews-v2
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        create_service: false
-        labels:
-          custom.app: reviews
-          version: v2
-      containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.4
-        name: reviews
-        ports:
-        - container Port: 9080
-          name: http
-      name: reviews-v2
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-reviews-v2
+              version: v2
+              custom.app: reviews
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-reviews-v2:1.16.4
+              name: reviews-v2
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges: []
@@ -230,23 +269,30 @@ services:
           posY: 152.15247972754568
   reviews-v3:
     name: reviews-v3
-    type: Application
+    type: Deployment
     namespace: default
+    apiVersion: apps/v1
+    model: kubernetes
     settings:
-      advanced:
-        create_service: false
-        labels:
-          custom.app: reviews
-          version: v3
-      containers:
-      - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.4
-        name: reviews
-        ports:
-        - container Port: 9080
-          name: http
-      name: reviews-v3
-      namespace: default
-      replicas: 1
+      spec:
+        replicas: 1
+        selector:
+          match Labels:
+            deploy: istio
+        template:
+          metadata:
+            labels:
+              deploy: istio-book-info-reviews-v3
+              version: v3
+              custom.app: reviews
+          spec:
+            containers:
+            - image: docker.io/istio/examples-bookinfo-reviews-v3:1.16.4
+              name: reviews-v3
+              ports:
+              - container Port: 9080
+                host Port: 9080
+                protocol: TCP
     traits:
       meshmap:
         edges:
@@ -266,7 +312,8 @@ services:
           posY: 216.40590828780256
   sample-app-gateway:
     name: sample-app-gateway
-    type: Gateway.Istio
+    type: Gateway
+    model: istio
     namespace: default
     settings:
       name: sample-app-gateway
