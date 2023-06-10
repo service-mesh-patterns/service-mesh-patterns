@@ -200,7 +200,8 @@ services:
           posY: 391
   reviews:
     name: reviews
-    type: Service.K8s
+    type: Service
+    model: kubernetes
     namespace: default
     settings:
       name: reviews
