@@ -9,6 +9,7 @@ services:
     type: LinkerdMesh
     namespace:  $(#ref.vars.controlplaneNS)
     version: $(#ref.vars.linkerdVersion)
+    model: LINKERD
     settings:
       version: $(#ref.vars.linkerdVersion)
       profile: $(#ref.vars.profile)
