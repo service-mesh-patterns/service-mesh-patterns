@@ -98,7 +98,7 @@ const Footer = () => {
         </Maildiv>
       </Wrapperdiv>
       <Copyrightdiv>
-        <p>@Layer5, Inc. Copyright 2022</p>
+        <p>{`@Layer5, Inc. Copyright ${new Date().getFullYear()}`}</p>
         <Icondiv>
           <a href="https://discuss.layer5.io" target="_blank" rel="noreferrer">
             <img height="30px" src={forum_icon} alt="forum" />
