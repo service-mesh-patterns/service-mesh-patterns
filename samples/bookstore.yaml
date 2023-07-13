@@ -4,11 +4,13 @@ name: BookStore
 services:
   7b24589e-2602-46d2-b82e-c0df9d3618d4:
     name: bookstore
-    type: ServiceAccount.K8s
+    type: ServiceAccount
+    model: kubernetes
     namespace: bookstore
   57636a3b-adee-4baf-bb24-c73e9f01228c:
     name: bookstore
-    type: Service.K8s
+    type: Service
+    model: kubernetes
     namespace: bookstore
     labels:
       app: bookstore
@@ -21,13 +23,14 @@ services:
           app: bookstore
   921797f2-3230-48a7-84a8-220820e108ec:
     name: bookstore
-    type: Deployment.K8s
+    type: Deployment
+    model: kubernetes
     namespace: bookstore
     settings:
       spec:
         replicas: 1
         selector:
-          matchLabels:
+          match Labels:
             app: bookstore
         template:
           metadata:
@@ -46,12 +49,12 @@ services:
               - name: IDENTITY
                 value: bookstore-v1
               image: openservicemesh/bookstore:latest-main
-              imagePullPolicy: Always
+              image Pull Policy: Always
               name: bookstore
               ports:
-              - containerPort: 14001
+              - container Port: 14001
                 name: web
-            nodeSelector:
+            node Selector:
               kubernetes.io/arch: amd64
               kubernetes.io/os: linux
-            serviceAccountName: bookstore
+            service Account Name: bookstore
