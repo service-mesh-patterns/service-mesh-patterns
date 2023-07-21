@@ -1,0 +1,45 @@
+name: IstioSPIRE Smoke Test
+
+on:
+  push:
+    paths:
+      - 'samples/IstioSPIRE.yaml'
+
+jobs:
+  smoke_test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Set up Kubernetes
+        uses: azure/setup-kubectl@v1
+        with:
+          version: 'latest'
+
+      - name: Set up Istio
+        run: |
+          curl -L https://istio.io/downloadIstio | ISTIO_VERSION=1.12.0 sh -
+          export PATH="$PATH:$HOME/istio-1.12.0/bin"
+          istioctl install --set profile=demo
+
+      - name: Set up SPIRE
+        run: |
+          # Add the necessary commands to set up SPIRE on your test cluster
+
+      - name: Deploy Sample IstioSPIRE.yaml
+        run: |
+          kubectl apply -f samples/IstioSPIRE.yaml
+
+      - name: Wait for Deployment to Be Ready
+        run: |
+          kubectl wait --for=condition=available deployment -l app=myapp -n mynamespace --timeout=300s
+
+      - name: Run Smoke Tests
+        run: |
+          # Add the necessary commands to run smoke tests on the deployed sample
+
+      - name: Delete Sample Deployment
+        run: |
+          kubectl delete -f samples/IstioSPIRE.yaml
