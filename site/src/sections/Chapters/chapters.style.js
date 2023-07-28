@@ -7,6 +7,16 @@ const ChaptersStyleWrapper = styled.main`
   justify-content: center;
   padding-block: 3rem;
 
+  h1{
+    font-size: 36px;
+    text-align: center;
+
+  }
+   h4{
+     text-align: center;
+   }
+
+
   p {
     margin: 0;
     padding: 0;
