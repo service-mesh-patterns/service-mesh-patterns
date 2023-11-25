@@ -54,13 +54,13 @@ const Footer = () => {
               Service Mesh Books
             </a>
             <a href="https://layer5.io/learn/service-mesh-workshops">
-              Service Mesh Workshops
+              Cloud Native Workshops
             </a>
             <a href="https://layer5.io/service-mesh-landscape">
               Service Mesh Comparison
             </a>
             <a href="https://layer5.io/learn/service-mesh-labs">
-              Service Mesh Interactive Lab
+              Cloud Native Interactive Lab
             </a>
           </Resourceslink>
         </Resourcesdiv>

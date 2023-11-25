@@ -21,4 +21,7 @@ assignees: 'maintainers'
 #### Contributor Guides and Resources
 - 🛠 [Meshery Build & Release Strategy](https://docs.meshery.io/project/build-and-release)
 - 📚 [Instructions for contributing](https://github.com/service-mesh-patterns/service-mesh-patterns/blob/master/CONTRIBUTING.md)
+- 📑 [Service Mesh Patterns in Meshery Catalog](https://meshery.io/catalog)
+- 📖 [Service Mesh Patterns Book](https://layer5.io/learn/service-mesh-books/service-mesh-patterns)
+- 📑 Fill-in the [Layer5 Community Member Form](https://layer5.io/newcomer) and join the [Layer5 Community Slack](http://slack.layer5.io) for access.
 - 🙋🏾🙋🏼 Questions: [Discussion Forum](https://discuss.layer5.io) and [Community Slack](http://slack.layer5.io)
