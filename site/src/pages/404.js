@@ -4,7 +4,7 @@ import SeoComponent from "../components/seo";
 import Layout from "../components/layout";
 
 
-//  CSS styles for centralized style
+//  CSS styles for centralizing style
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
