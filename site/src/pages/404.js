@@ -4,7 +4,7 @@ import SeoComponent from "../components/seo";
 import Layout from "../components/layout";
 
 
-// styles
+//  CSS styles
 const codeStyles = {
   color: "#8A6534",
   padding: 4,
@@ -13,7 +13,7 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-// markup
+// markup for 404 page
 const NotFoundPage = () => {
   return (
     <>
