@@ -13,7 +13,7 @@ const codeStyles = {
   borderRadius: 4,
 };
 
-// markup for 404 page
+// markup for 404 page as a template for other pages and this page, too.
 const NotFoundPage = () => {
   return (
     <>
